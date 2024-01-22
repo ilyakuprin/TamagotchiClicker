@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4840b68d3ada741f39389aa0586ccf5f
+guid: 2c8074deac6f9484894678f479234aa3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2281eac6204df4320920a46d42b62f41
-      internalID: -1647072756
+      spriteID: f2b6aa1e580a34bfba8a7dc153ed9f2a
+      internalID: 1142220148
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       name: akula_shadow_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 355
+        x: 317
+        y: 352
         width: 180
         height: 150
       alignment: 0
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab07e653846934bcb976e6a61a8cca9b
-      internalID: -705631628
+      spriteID: 109e7089e7dfd4e82ac0cdf1b0afc1b1
+      internalID: 558636666
       vertices: []
       indices: 
       edges: []
@@ -155,50 +155,8 @@ TextureImporter:
       name: akula_shadow_2
       rect:
         serializedVersion: 2
-        x: 328
-        y: 355
-        width: 180
-        height: 150
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f116a3b6c986e49639a6074e64a709cb
-      internalID: 1210100310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: akula_shadow_3
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 167
-        width: 204
-        height: 150
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4cd36960d0874e7e89afcda251941eb
-      internalID: 2020840006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: akula_shadow_4
-      rect:
-        serializedVersion: 2
-        x: 277
-        y: 165
+        x: 162
+        y: 205
         width: 202
         height: 150
       alignment: 0
@@ -208,8 +166,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e91726c999b1462ea9846393bf3a13d
-      internalID: -708534126
+      spriteID: e9835e41e66a24f809c02274a3720b5a
+      internalID: 1742020034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akula_shadow_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 9
+        width: 204
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a46cc911fd8486faa06ac158de7f59
+      internalID: -1951072248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akula_shadow_4
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 6
+        width: 181
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f3fa1ba660a43a7bc3bcba201f039c
+      internalID: 2442969
       vertices: []
       indices: 
       edges: []
@@ -225,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      akula_shadow_0: -1647072756
-      akula_shadow_1: -705631628
-      akula_shadow_2: 1210100310
-      akula_shadow_3: 2020840006
-      akula_shadow_4: -708534126
+      akula_shadow_0: 1142220148
+      akula_shadow_1: 558636666
+      akula_shadow_2: 1742020034
+      akula_shadow_3: -1951072248
+      akula_shadow_4: 2442969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

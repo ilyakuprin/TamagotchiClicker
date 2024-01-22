@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 960053fa99ba440b8927532ad16893e5
+guid: 9af919eaf04fe4f2a9b31bf71cc0bca6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Panda_shadow_0
+      name: Panda_shadow 1_0
       rect:
         serializedVersion: 2
         x: 9
@@ -124,18 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00a3bbe52dcf1486798dbb167cea5e06
-      internalID: 1358105438
+      spriteID: b5c95e07c35d84785aa31f6565c1dba2
+      internalID: -1382901204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Panda_shadow_1
+      name: Panda_shadow 1_1
       rect:
         serializedVersion: 2
-        x: 166
-        y: 410
+        x: 453
+        y: 399
         width: 139
         height: 202
       alignment: 0
@@ -145,35 +145,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5874ffc71a5f4eb7a0eab3348be63d7
-      internalID: -721832714
+      spriteID: 30e074ff791674b588522a3e01d28850
+      internalID: -335416952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Panda_shadow_2
+      name: Panda_shadow 1_2
       rect:
         serializedVersion: 2
-        x: 5
-        y: 205
+        x: 222
+        y: 208
         width: 137
         height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 1, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad9270130b5064b8f956e19f7924ff83
-      internalID: -1541894794
+      spriteID: 4b7260332db284ad2a61b626a27896fc
+      internalID: 1524153862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Panda_shadow_3
+      name: Panda_shadow 1_3
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 14
+        width: 167
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b567c2ea75b174088adccada33ecf980
+      internalID: 596378675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda_shadow 1_4
       rect:
         serializedVersion: 2
         x: 2
@@ -187,29 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e9a3f0bda9814d9a86cd106a7ae5de0
-      internalID: 750794808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Panda_shadow_4
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 205
-        width: 168
-        height: 201
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8cf5fa2126954fa99383c6902fa97be
-      internalID: 1465241888
+      spriteID: f7261d610a0a144a6a2ee56670b17100
+      internalID: 1432204634
       vertices: []
       indices: 
       edges: []
@@ -225,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Panda_shadow_0: 1358105438
-      Panda_shadow_1: -721832714
-      Panda_shadow_2: -1541894794
-      Panda_shadow_3: 750794808
-      Panda_shadow_4: 1465241888
+      Panda_shadow 1_0: -1382901204
+      Panda_shadow 1_1: -335416952
+      Panda_shadow 1_2: 1524153862
+      Panda_shadow 1_3: 596378675
+      Panda_shadow 1_4: 1432204634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
