@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e61bf934eb144d9c88122cef296133c
+guid: d739a845eda2244508b3d480b45e542b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: akula_0
+      name: shark_0
       rect:
         serializedVersion: 2
         x: 31
@@ -124,18 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccfa9a00470a2415fadd0c57149ae9d8
-      internalID: 1777309626
+      spriteID: 1aea15992006c4a8a9713a58cde87b02
+      internalID: 231845369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: akula_1
+      name: shark_1
       rect:
         serializedVersion: 2
-        x: 579
-        y: 530
+        x: 591
+        y: 525
         width: 647
         height: 717
       alignment: 0
@@ -145,18 +145,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8392791d6ff44362bd9f401157ef5b2
-      internalID: -358422388
+      spriteID: af72e287a9a0a47118a52d22088fc291
+      internalID: -10054411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: akula_2
+      name: shark_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 248
+        x: 36
+        y: 551
+        width: 281
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53ab0fea0cc54d3fbb809d305197086
+      internalID: -1535676666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shark_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
         width: 604
         height: 505
       alignment: 0
@@ -166,39 +187,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5fef36f403ff400688cfda34eadb017
-      internalID: -172042015
+      spriteID: aa069d8a544b14938b922791a654a6d9
+      internalID: 920791629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: akula_3
+      name: shark_4
       rect:
         serializedVersion: 2
-        x: 610
-        y: 291
-        width: 282
-        height: 210
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9488d72aa988b4709b69b8e622cdcaec
-      internalID: -191096784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: akula_4
-      rect:
-        serializedVersion: 2
-        x: 895
-        y: 239
+        x: 875
+        y: 26
         width: 346
         height: 286
       alignment: 0
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24f114e206d9e4321a68a7a77dc1f141
-      internalID: -480283808
+      spriteID: db3041aef12b44cb19931097a164e651
+      internalID: 455209417
       vertices: []
       indices: 
       edges: []
@@ -225,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      akula_0: 1777309626
-      akula_1: -358422388
-      akula_2: -172042015
-      akula_3: -191096784
-      akula_4: -480283808
+      shark_0: 231845369
+      shark_1: -10054411
+      shark_2: -1535676666
+      shark_3: 920791629
+      shark_4: 455209417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
