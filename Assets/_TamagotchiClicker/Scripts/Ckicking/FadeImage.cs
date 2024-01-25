@@ -3,17 +3,15 @@ using UnityEngine.UI;
 
 namespace TamagotchiClicker
 {
-    public class FadeImage : Fade
+    public class FadeImage : IFadeOut
     {
-        private readonly Image _image; 
+        private readonly Image _image;
+        private readonly float _startAlpha = 1;
 
-        public FadeImage(float resultingTransparency, float timeFading, Image image) :
-            base(resultingTransparency, timeFading)
-        {
-            _image = image;
-        }
+        public FadeImage(Image image)
+            => _image = image;
 
-        public override void FadeOut()
-            => _image.DOFade(resultingTransparency, timeFading);
+        public void FadeOut(float resultingTransparency, float timeFading)
+            => _image.DOFade(resultingTransparency, timeFading).From(_startAlpha);
     }
 }

@@ -3,20 +3,17 @@ using TMPro;
 
 namespace TamagotchiClicker
 {
-    public class FadeText : Fade
+    public class FadeText : IFadeOut
     {
         private readonly TextMeshProUGUI _text;
+        private readonly float _startAlpha = 1;
 
-        public FadeText(float resultingTransparency, float timeFading, TextMeshProUGUI text) :
-            base(resultingTransparency, timeFading)
-        {
-            _text = text;
-        }
+        public FadeText(TextMeshProUGUI text)
+            => _text = text;
 
-        public override void FadeOut()
+        public void FadeOut(float resultingTransparency, float timeFading)
         {
-            _text.DOFade(resultingTransparency, timeFading);
-            UnityEngine.Debug.Log("FadeOut FadeText");
+            _text.DOFade(resultingTransparency, timeFading).From(_startAlpha);
         }
     }
 }

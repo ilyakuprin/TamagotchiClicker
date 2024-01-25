@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: FadeConfig
   m_EditorClassIdentifier: 
   <ResultingTransparency>k__BackingField: 0
-  <TimeFading>k__BackingField: 2
+  <TimeFading>k__BackingField: 1.3
+  <TakeoffAltitude>k__BackingField: 200
