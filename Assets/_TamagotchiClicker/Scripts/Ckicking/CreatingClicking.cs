@@ -11,7 +11,7 @@ namespace TamagotchiClicker
         private readonly ParentCreatedClicks _parent;
 
         private Clicking[] _clickings;
-        public readonly int _numberÑlicks = 15;
+        public readonly int _numberClicks = 15;
 
         public CreatingClicking(DiContainer diContainer,
                                 Clicking clicking,
@@ -22,11 +22,11 @@ namespace TamagotchiClicker
             _parent = parent;
         }
 
-        public int NumberÑlicks { get => _numberÑlicks; }
+        public int NumberClicks { get => _numberClicks; }
 
         public Clicking GetClicking(int index)
         {
-            if (index >=0 && index < _numberÑlicks)
+            if (index >=0 && index < _numberClicks)
                 return _clickings[index];
             else
                 throw new IndexOutOfRangeException();
@@ -34,9 +34,9 @@ namespace TamagotchiClicker
 
         public void Initialize()
         {
-            _clickings = new Clicking[_numberÑlicks];
+            _clickings = new Clicking[_numberClicks];
 
-            for (int i = 0; i < _numberÑlicks; i++)
+            for (int i = 0; i < _numberClicks; i++)
             {
                 _clickings[i] = GetCreatingClicking();
             }

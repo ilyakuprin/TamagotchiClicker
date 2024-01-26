@@ -19,7 +19,7 @@ namespace TamagotchiClicker
 
         private void Activate()
         {
-            if (_currentClick >= _creatingClicking.NumberÑlicks)
+            if (_currentClick >= _creatingClicking.NumberClicks)
                 _currentClick = 0;
 
             Clicking clicking = _creatingClicking.GetClicking(_currentClick);
