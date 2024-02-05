@@ -17,13 +17,10 @@ namespace TamagotchiClicker
         }
 
         private void OnClick()
-        {
-            YandexGame.savesData.ClickCount++;
-            UnityEngine.Debug.Log(YandexGame.savesData.ClickCount);
-        }
+            => YandexGame.savesData.Money++;
 
         private void OnSave()
-            => _saving.OnSave();
+            => _saving.Save();
 
         public void Initialize()
         {

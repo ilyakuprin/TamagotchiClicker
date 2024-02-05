@@ -14,7 +14,7 @@ namespace TamagotchiClicker
             YandexGame.GetDataEvent += OnDataReceived;
         }
 
-        public void OnSave()
+        public void Save()
         {
             YandexGame.SaveProgress();
             OnDataReceived();

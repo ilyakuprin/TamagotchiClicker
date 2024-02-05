@@ -9,7 +9,6 @@
         public string language = "ru";
         public bool promptDone;
 
-        public int ClickCount;
         public int Money;
     }
 }

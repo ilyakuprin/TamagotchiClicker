@@ -7652,8 +7652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35, y: 0.000011444092}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -110.059, y: 0.000011444092}
+  m_SizeDelta: {x: 412.565, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739894597
 MonoBehaviour:
@@ -7705,9 +7705,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
@@ -14448,6 +14448,7 @@ GameObject:
   - component: {fileID: 1529942055}
   - component: {fileID: 1529942056}
   - component: {fileID: 1529942057}
+  - component: {fileID: 1529942058}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -14496,6 +14497,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Parent>k__BackingField: {fileID: 427344171}
+--- !u!114 &1529942058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529942054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169e45a93e8d7304a9c923c8a42c0dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 739894597}
 --- !u!1 &1531307594
 GameObject:
   m_ObjectHideFlags: 0
@@ -19601,6 +19615,7 @@ MonoBehaviour:
   _clicking: {fileID: 99857523211564933, guid: b1f49ee7b8c60cf4e98abfdf34c12848, type: 3}
   _parentCreatedClicks: {fileID: 1529942057}
   _fadeConfig: {fileID: 11400000, guid: 65bec4ca833980d4abcb8c8b07ae987f, type: 2}
+  _counterMoneyView: {fileID: 0}
 --- !u!1 &2089381030
 GameObject:
   m_ObjectHideFlags: 0
