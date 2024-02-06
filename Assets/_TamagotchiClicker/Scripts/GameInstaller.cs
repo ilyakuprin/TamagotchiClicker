@@ -10,6 +10,7 @@ namespace TamagotchiClicker
         [SerializeField] private ParentCreatedClicks _parentCreatedClicks;
         [SerializeField] private FadeConfig _fadeConfig;
         [SerializeField] private CounterMoneyView _counterMoneyView;
+        [SerializeField] private CostHeroesConfig _ñostHeroesConfig;
 
         public override void InstallBindings()
         {
@@ -25,6 +26,8 @@ namespace TamagotchiClicker
             Container.Bind<FadeConfig>().FromInstance(_fadeConfig).AsSingle();
 
             Container.Bind<CounterMoneyView>().FromInstance(_counterMoneyView).AsSingle();
+
+            Container.Bind<CostHeroesConfig>().FromInstance(_ñostHeroesConfig).AsSingle();
         }
     }
 }

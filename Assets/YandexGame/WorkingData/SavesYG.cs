@@ -10,5 +10,6 @@
         public bool promptDone;
 
         public int Money;
+        public int NextHeroIndex;
     }
 }

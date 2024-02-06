@@ -10,15 +10,21 @@ namespace TamagotchiClicker
         private const string FormatString = "{0}/{1}";
 
         [SerializeField] private TextMeshProUGUI _text;
-        private int _max = 100;
         private Saving _saving;
+        private CostHeroesConfig _config;
 
         [Inject]
-        private void Construct(Saving saving)
-            => _saving = saving;
+        private void Construct(Saving saving,
+                               CostHeroesConfig config)
+        {
+            _saving = saving;
+            _config = config;
+        }
 
         private void Show()
-            => _text.text = string.Format(FormatString, YandexGame.savesData.Money, _max);
+            => _text.text = string.Format(FormatString,
+                                          YandexGame.savesData.Money,
+                                          _config.GetValue(YandexGame.savesData.NextHeroIndex));
 
         private void OnEnable()
             => _saving.SaveDataReceived += Show;

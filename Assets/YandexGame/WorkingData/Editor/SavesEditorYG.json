@@ -1,7 +1,8 @@
 {
-    "idSave": 970,
+    "idSave": 997,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "Money": 27
+    "Money": 54,
+    "NextHeroIndex": 0
 }
