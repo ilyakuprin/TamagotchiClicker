@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2420,7 +2420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3274,7 +3274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10048,7 +10048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10596,7 +10596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10897,7 +10897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12896,7 +12896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13617,45 +13617,45 @@ MonoBehaviour:
   - Image: {fileID: 2146369719}
     Buy: {fileID: 1553136205}
     Active: {fileID: -867908325, guid: 46376bafe07eb42a3bbc2c3533ec903c, type: 3}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
-  - Image: {fileID: 0}
-    Buy: {fileID: 0}
-    Active: {fileID: 0}
+  - Image: {fileID: 118920876}
+    Buy: {fileID: 1961785286}
+    Active: {fileID: 2124698555, guid: 46376bafe07eb42a3bbc2c3533ec903c, type: 3}
+  - Image: {fileID: 1706266686}
+    Buy: {fileID: 525507345}
+    Active: {fileID: -401206450, guid: 46376bafe07eb42a3bbc2c3533ec903c, type: 3}
+  - Image: {fileID: 326824737}
+    Buy: {fileID: 2106374687}
+    Active: {fileID: -1948268593, guid: 46376bafe07eb42a3bbc2c3533ec903c, type: 3}
+  - Image: {fileID: 1409239443}
+    Buy: {fileID: 78877332}
+    Active: {fileID: -1535676666, guid: d739a845eda2244508b3d480b45e542b, type: 3}
+  - Image: {fileID: 1638799380}
+    Buy: {fileID: 724012854}
+    Active: {fileID: 455209417, guid: d739a845eda2244508b3d480b45e542b, type: 3}
+  - Image: {fileID: 2044590205}
+    Buy: {fileID: 859398964}
+    Active: {fileID: 231845369, guid: d739a845eda2244508b3d480b45e542b, type: 3}
+  - Image: {fileID: 1750237955}
+    Buy: {fileID: 1682358401}
+    Active: {fileID: 920791629, guid: d739a845eda2244508b3d480b45e542b, type: 3}
+  - Image: {fileID: 1753073745}
+    Buy: {fileID: 127095472}
+    Active: {fileID: -10054411, guid: d739a845eda2244508b3d480b45e542b, type: 3}
+  - Image: {fileID: 1080711020}
+    Buy: {fileID: 1423404836}
+    Active: {fileID: 934990785, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
+  - Image: {fileID: 244329089}
+    Buy: {fileID: 1582058334}
+    Active: {fileID: 2102380213, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
+  - Image: {fileID: 1160945988}
+    Buy: {fileID: 801521602}
+    Active: {fileID: -1788538596, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
+  - Image: {fileID: 1123088625}
+    Buy: {fileID: 1993009058}
+    Active: {fileID: -1897602131, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
+  - Image: {fileID: 2089381032}
+    Buy: {fileID: 89576362}
+    Active: {fileID: 1928233324, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
 --- !u!1 &1531307594
 GameObject:
   m_ObjectHideFlags: 0
@@ -13707,7 +13707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15055,7 +15055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15522,7 +15522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15768,7 +15768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15843,7 +15843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -18207,7 +18207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -18609,7 +18609,7 @@ MonoBehaviour:
   _parentCreatedClicks: {fileID: 1529942057}
   _fadeConfig: {fileID: 11400000, guid: 65bec4ca833980d4abcb8c8b07ae987f, type: 2}
   _counterMoneyView: {fileID: 1529942058}
-  "_\u0441ostHeroesConfig": {fileID: 11400000, guid: 273e1c59ab34df7438ab086860161e18, type: 2}
+  _costHeroesConfig: {fileID: 0}
 --- !u!1 &2089381030
 GameObject:
   m_ObjectHideFlags: 0
@@ -18661,7 +18661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -19289,7 +19289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
