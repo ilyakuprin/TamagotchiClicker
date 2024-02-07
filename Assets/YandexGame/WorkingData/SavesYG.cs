@@ -9,7 +9,7 @@
         public string language = "ru";
         public bool promptDone;
 
-        public int Money;
-        public int NextHeroIndex;
+        public ulong Money;
+        public int NextHeroIndex = 1;
     }
 }

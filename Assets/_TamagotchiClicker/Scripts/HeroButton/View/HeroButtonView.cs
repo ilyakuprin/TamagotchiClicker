@@ -9,6 +9,7 @@ namespace TamagotchiClicker
         public event Action Pressed;
 
         [SerializeField] private Button _hero;
+        [field: SerializeField] public Image ImageHero { get; private set; }
 
         private void Press()
             => Pressed?.Invoke();

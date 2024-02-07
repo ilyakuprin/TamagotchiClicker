@@ -1,7 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
-using Zenject;
+using YG;
 
 namespace TamagotchiClicker
 {
@@ -10,6 +10,7 @@ namespace TamagotchiClicker
     {
         public Image Image;
         public Button Buy;
+        public Sprite NotActive;
         public Sprite Active;
     }
 
@@ -17,24 +18,24 @@ namespace TamagotchiClicker
     {
         [SerializeField] private Hero[] _hero;
 
-        private Saving _saving;
+        public Hero Get(int index)
+            => _hero[index];
 
-        [Inject]
-        private void Construct(Saving saving)
+        public int GetLength()
+            => _hero.Length;
+
+        private void Awake()
+            => Show();
+
+        private void Show()
         {
-            _saving = saving;
+            for (var i = YandexGame.savesData.NextHeroIndex; i < _hero.Length; i++)
+            {
+                var hero = _hero[i];
+
+                hero.Buy.interactable = false;
+                hero.Image.sprite = hero.NotActive;
+            }
         }
-
-        public void Show()
-        {
-            //for (int i = 0; i < UPPER; i++)
-            
-        }
-
-        private void OnEnable()
-            => _saving.SaveDataReceived += Show;
-
-        private void OnDisable()
-            => _saving.SaveDataReceived -= Show;
     }
 }

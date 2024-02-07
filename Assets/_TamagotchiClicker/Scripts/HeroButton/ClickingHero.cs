@@ -21,7 +21,7 @@ namespace TamagotchiClicker
 
         private void OnClick()
         {
-            if (_config.GetValue(YandexGame.savesData.NextHeroIndex) > YandexGame.savesData.Money)
+            if (_config.Get(YandexGame.savesData.NextHeroIndex) > YandexGame.savesData.Money)
             {
                 YandexGame.savesData.Money++;
                 _saving.Save();
