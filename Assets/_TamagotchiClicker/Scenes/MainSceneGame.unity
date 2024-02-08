@@ -4584,7 +4584,7 @@ MonoBehaviour:
   m_Elasticity: 0.3
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 20
+  m_ScrollSensitivity: 100
   m_Viewport: {fileID: 761033918}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -13540,6 +13540,8 @@ GameObject:
   - component: {fileID: 1529942057}
   - component: {fileID: 1529942058}
   - component: {fileID: 1529942059}
+  - component: {fileID: 1529942060}
+  - component: {fileID: 1529942061}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13657,24 +13659,50 @@ MonoBehaviour:
     Active: {fileID: -10054411, guid: d739a845eda2244508b3d480b45e542b, type: 3}
   - Image: {fileID: 1080711020}
     Buy: {fileID: 1582058334}
-    NotActive: {fileID: 934990785, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
-    Active: {fileID: 302962956, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    NotActive: {fileID: 302962956, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    Active: {fileID: 934990785, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
   - Image: {fileID: 244329089}
     Buy: {fileID: 801521602}
-    NotActive: {fileID: 2102380213, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
-    Active: {fileID: 66965513, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    NotActive: {fileID: 66965513, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    Active: {fileID: 2102380213, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
   - Image: {fileID: 1160945988}
     Buy: {fileID: 1993009058}
-    NotActive: {fileID: -1788538596, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
-    Active: {fileID: 1270852585, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    NotActive: {fileID: 1270852585, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    Active: {fileID: -1788538596, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
   - Image: {fileID: 1123088625}
     Buy: {fileID: 89576362}
-    NotActive: {fileID: -1897602131, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
-    Active: {fileID: 1525834510, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    NotActive: {fileID: 1525834510, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    Active: {fileID: -1897602131, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
   - Image: {fileID: 2089381032}
     Buy: {fileID: 1618272953}
-    NotActive: {fileID: 1928233324, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
-    Active: {fileID: -1968418189, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    NotActive: {fileID: -1968418189, guid: b8b7ce1be95d24465a5c1e0226e9907a, type: 3}
+    Active: {fileID: 1928233324, guid: be58d2822e03449828ec001b65c15dc6, type: 3}
+--- !u!114 &1529942060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529942054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce99335edb0182489417bec0e44aa0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 1345437118}
+--- !u!114 &1529942061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529942054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed8ae82ab9b02d4d8c1fbd7cf48147a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 1798224009}
 --- !u!1 &1531307594
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 using YG;
 using Zenject;
 
@@ -15,38 +14,54 @@ namespace TamagotchiClicker
         {
             _heroMatching = heroMatching;
             _saving = saving;
-
         }
 
         public void Initialize()
-            => SubscribeOnBuyButton();
+            => SubscribeAllBuyButton();
 
-        private void SubscribeOnBuyButton()
+        private void SubscribeAllBuyButton()
         {
-            for (var i = 0; i < _heroMatching.GetLength(); i++)
+            for (var i = YandexGame.savesData.NextHeroIndex; i < _heroMatching.GetLength(); i++)
             {
                 var hero = _heroMatching.Get(i);
-                hero.Buy.onClick.AddListener(ChangeSaveData);
+                hero.Buy.onClick.AddListener(Buy);
             }
+        }
+
+        private void Buy()
+        {
+            Unsubscribe(YandexGame.savesData.NextHeroIndex);
+            ActivateHeroInShop();
+            ChangeSaveData();
+        }
+
+        private void Unsubscribe(int index)
+        {
+            var hero = _heroMatching.Get(index);
+            hero.Buy.onClick.RemoveListener(Buy);
+        }
+
+        private void ActivateHeroInShop()
+        {
+            var hero = _heroMatching.Get(YandexGame.savesData.NextHeroIndex);
+            hero.Image.sprite = hero.Active;
         }
 
         private void ChangeSaveData()
         {
             YandexGame.savesData.Money = 0;
             YandexGame.savesData.NextHeroIndex++;
-
             _saving.Save();
         }
 
         public void Dispose()
-            => UnsubscribeOnBuyButton();
+            => UnsubscribeAllBuyButton();
 
-        private void UnsubscribeOnBuyButton()
+        private void UnsubscribeAllBuyButton()
         {
-            for (var i = 0; i < _heroMatching.GetLength(); i++)
+            for (var i = YandexGame.savesData.NextHeroIndex; i < _heroMatching.GetLength(); i++)
             {
-                var hero = _heroMatching.Get(i);
-                hero.Buy.onClick.RemoveListener(ChangeSaveData);
+                Unsubscribe(i);
             }
         }
     }
