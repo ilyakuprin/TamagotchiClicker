@@ -29,15 +29,6 @@ namespace TamagotchiClicker
             }
         }
 
-        private void ChangeSprite(Sprite spriteHero)
-        {
-            _mainHero.ImageHero.sprite = spriteHero;
-            _mainHero.ImageHero.SetNativeSize();
-        }
-
-        public void Dispose()
-            => UnsubscribeOnBuyButton();
-
         private void UnsubscribeOnBuyButton()
         {
             for (var i = 0; i < _heroMatching.GetLength(); i++)
@@ -47,5 +38,14 @@ namespace TamagotchiClicker
                 hero.Buy.onClick.RemoveListener(() => ChangeSprite(spriteHero));
             }
         }
+
+        private void ChangeSprite(Sprite spriteHero)
+        {
+            _mainHero.ImageHero.sprite = spriteHero;
+            _mainHero.ImageHero.SetNativeSize();
+        }
+
+        public void Dispose()
+            => UnsubscribeOnBuyButton();
     }
 }

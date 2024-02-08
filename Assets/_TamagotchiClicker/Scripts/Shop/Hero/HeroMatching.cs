@@ -12,6 +12,7 @@ namespace TamagotchiClicker
         public Button Buy;
         public Sprite NotActive;
         public Sprite Active;
+        public Sprite Background;
     }
 
     public class HeroMatching : MonoBehaviour
