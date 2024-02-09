@@ -11,5 +11,6 @@
 
         public ulong Money;
         public int NextHeroIndex = 1;
+        public int NextBoostIndex = 1;
     }
 }

@@ -1,5 +1,6 @@
 using TamagotchiClicker;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using YG;
 using Zenject;
@@ -15,6 +16,8 @@ public class ResetSave : MonoBehaviour
         YandexGame.savesData.NextHeroIndex = 1;
 
         _saving.Save();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void OnEnable()
