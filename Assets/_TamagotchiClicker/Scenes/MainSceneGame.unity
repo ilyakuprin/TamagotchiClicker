@@ -13233,44 +13233,54 @@ MonoBehaviour:
   _boosts:
   - Image: {fileID: 546721666}
     Buy: {fileID: 1288753604}
-    NotActive: {fileID: 0}
+    NotActive: {fileID: 21300000, guid: b4f602cb9c1e940af8d3db1d6673a803, type: 3}
     Active: {fileID: 21300000, guid: b4f602cb9c1e940af8d3db1d6673a803, type: 3}
+    Price: {fileID: 1855694718}
   - Image: {fileID: 2130918296}
     Buy: {fileID: 2051178481}
     NotActive: {fileID: 150920810, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: -814840282, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 1536615798}
   - Image: {fileID: 26195682}
     Buy: {fileID: 1204847323}
     NotActive: {fileID: 1130247118, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: 2004438641, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 496041515}
   - Image: {fileID: 433648018}
     Buy: {fileID: 111864256}
     NotActive: {fileID: 1935772734, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: 1679269687, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 401000725}
   - Image: {fileID: 412894067}
     Buy: {fileID: 1672131587}
     NotActive: {fileID: -60918122, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: 1037051614, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 607337060}
   - Image: {fileID: 587972410}
     Buy: {fileID: 2024412587}
     NotActive: {fileID: -817729183, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: -1104541128, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 577524092}
   - Image: {fileID: 806685506}
     Buy: {fileID: 87545508}
     NotActive: {fileID: 1772522903, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: 1931363914, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 262843967}
   - Image: {fileID: 1576683408}
     Buy: {fileID: 478465096}
     NotActive: {fileID: -166779083, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: 1640732161, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 412132115}
   - Image: {fileID: 1084143142}
     Buy: {fileID: 1502747263}
     NotActive: {fileID: 1964031510, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: 469540951, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 740800583}
   - Image: {fileID: 1263459683}
     Buy: {fileID: 305132966}
     NotActive: {fileID: -351320296, guid: a15692f0dae8b4ef5a6d3f044682ded4, type: 3}
     Active: {fileID: 622738911, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
+    Price: {fileID: 1538840619}
 --- !u!1 &1531307594
 GameObject:
   m_ObjectHideFlags: 0
@@ -18575,6 +18585,8 @@ MonoBehaviour:
   _counterMoneyView: {fileID: 1529942058}
   _costHeroesConfig: {fileID: 11400000, guid: 273e1c59ab34df7438ab086860161e18, type: 2}
   _heroMatching: {fileID: 1529942059}
+  _boostsValueConfig: {fileID: 11400000, guid: 23645b57dbda4164ca215242c1abe4fc, type: 2}
+  _boostMatching: {fileID: 1529942063}
 --- !u!1 &2089381030
 GameObject:
   m_ObjectHideFlags: 0

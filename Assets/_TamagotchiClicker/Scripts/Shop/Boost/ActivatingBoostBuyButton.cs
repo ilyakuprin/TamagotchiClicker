@@ -5,21 +5,21 @@ using Zenject;
 
 namespace TamagotchiClicker
 {
-    public class ActivatingHeroBuyButton : IInitializable, IDisposable
+    public class ActivatingBoostBuyButton : IInitializable, IDisposable
     {
-        private readonly HeroMatching _heroMatching;
-        private readonly CostHeroesConfig _config;
+        private readonly BoostMatching _boostMatching;
+        private readonly BoostsValueConfig _config;
         private readonly Saving _saving;
 
         private Button _button;
 
-        public ActivatingHeroBuyButton(HeroMatching heroMatching,
-                                       Saving saving,
-                                       CostHeroesConfig config)
+        public ActivatingBoostBuyButton(BoostsValueConfig config,
+                                        BoostMatching boostMatching,
+                                        Saving saving)
         {
-            _heroMatching = heroMatching;
-            _saving = saving;
             _config = config;
+            _boostMatching = boostMatching;
+            _saving = saving;
         }
 
         public void Initialize()
@@ -27,13 +27,11 @@ namespace TamagotchiClicker
 
         private void Activate()
         {
-            var index = YandexGame.savesData.NextHeroIndex;
-
-            if (_config.GetLength() > index)
+            for (var i = 0; i < YandexGame.savesData.CurrentBoostIndex + 1; i++)
             {
-                _button = _heroMatching.Get(index).Buy;
+                _button = _boostMatching.Get(i).Buy;
 
-                if (YandexGame.savesData.Money >= _config.Get(index))
+                if (YandexGame.savesData.Money >= _config.GetCost(i))
                 {
                     SetInteractable(true);
                 }
@@ -41,10 +39,6 @@ namespace TamagotchiClicker
                 {
                     SetInteractable(false);
                 }
-            }
-            else
-            {
-                Dispose();
             }
         }
 

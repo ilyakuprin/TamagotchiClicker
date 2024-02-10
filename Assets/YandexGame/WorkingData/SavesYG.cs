@@ -11,6 +11,8 @@
 
         public ulong Money;
         public int NextHeroIndex = 1;
-        public int NextBoostIndex = 1;
+
+        public int CurrentBoostIndex;
+        public ulong[] NumberImprovements = new ulong[10];
     }
 }

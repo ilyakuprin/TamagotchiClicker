@@ -679,9 +679,9 @@
         </member>
         <member name="M:DG.Tweening.DOTween.To``3(DG.Tweening.Plugins.Core.ABSTweenPlugin{``0,``1,``2},DG.Tweening.Core.DOGetter{``0},DG.Tweening.Core.DOSetter{``0},``1,System.Single)">
             <summary>Tweens a property or field to the given value using a custom plugin</summary>
-            <param name="plugin">The plugin to use. Each custom plugin implements a static <code>Get()</code> method
+            <param name="plugin">The plugin to use. Each custom plugin implements a static <code>GetCost()</code> method
             you'll need to call to assign the correct plugin in the correct way, like this:
-            <para><code>CustomPlugin.Get()</code></para></param>
+            <para><code>CustomPlugin.GetCost()</code></para></param>
             <param name="getter">A getter for the field or property to tween.
             <para>Example usage with lambda:</para><code>()=> myProperty</code></param>
             <param name="setter">A setter for the field or property to tween

@@ -12,6 +12,8 @@ namespace TamagotchiClicker
         [SerializeField] private CounterMoneyView _counterMoneyView;
         [SerializeField] private CostHeroesConfig _costHeroesConfig;
         [SerializeField] private HeroMatching _heroMatching;
+        [SerializeField] private BoostsValueConfig _boostsValueConfig;
+        [SerializeField] private BoostMatching _boostMatching;
 
         public override void InstallBindings()
         {
@@ -22,6 +24,9 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<ActivatingHeroBuyButton>().AsSingle();
             Container.BindInterfacesAndSelfTo<ChangingHeroOnScreen>().AsSingle();
             Container.BindInterfacesAndSelfTo<BuyingHero>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ActivatingBoostBuyButton>().AsSingle();
+            Container.BindInterfacesAndSelfTo<OpeningNextBoost>().AsSingle();
+            Container.BindInterfacesAndSelfTo<BuyingBoost>().AsSingle();
 
             Container.Bind<HeroButtonView>().FromInstance(_heroButtonView).AsSingle();
             Container.Bind<Clicking>().FromInstance(_clicking).AsSingle();
@@ -33,6 +38,9 @@ namespace TamagotchiClicker
 
             Container.Bind<CostHeroesConfig>().FromInstance(_costHeroesConfig).AsSingle();
             Container.Bind<HeroMatching>().FromInstance(_heroMatching).AsSingle();
+
+            Container.Bind<BoostsValueConfig>().FromInstance(_boostsValueConfig).AsSingle();
+            Container.Bind<BoostMatching>().FromInstance(_boostMatching).AsSingle();
         }
     }
 }

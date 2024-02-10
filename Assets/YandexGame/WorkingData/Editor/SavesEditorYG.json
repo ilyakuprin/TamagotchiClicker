@@ -1,9 +1,21 @@
 {
-    "idSave": 1857,
+    "idSave": 2413,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "Money": 5,
+    "Money": 20,
     "NextHeroIndex": 1,
-    "NextBoostIndex": 1
+    "CurrentBoostIndex": 3,
+    "NumberImprovements": [
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
 }

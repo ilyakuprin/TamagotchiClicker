@@ -415,7 +415,7 @@ namespace YG
 #if !UNITY_EDITOR
             if (Instance.infoYG.leaderboardEnable)
             {
-                Message("Get Leaderboard");
+                Message("GetCost Leaderboard");
                 GetLeaderboardScores(nameLB, maxQuantityPlayers, quantityTop, quantityAround, photoSizeLB, _auth);
             }
             else
@@ -423,7 +423,7 @@ namespace YG
                 NoData();
             }
 #else
-            Message("Get Leaderboard - " + nameLB);
+            Message("GetCost Leaderboard - " + nameLB);
 
             if (Instance.infoYG.leaderboardEnable)
             {
@@ -473,7 +473,7 @@ namespace YG
 
         public static void GetPayments()
         {
-            Message("Get Payments");
+            Message("GetCost Payments");
 #if !UNITY_EDITOR
             GetPaymentsInternal();
 #else
