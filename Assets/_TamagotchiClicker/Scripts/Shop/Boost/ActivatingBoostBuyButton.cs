@@ -8,16 +8,16 @@ namespace TamagotchiClicker
     public class ActivatingBoostBuyButton : IInitializable, IDisposable
     {
         private readonly BoostMatching _boostMatching;
-        private readonly BoostsValueConfig _config;
+        private readonly BuyingBoost _buyingBoost;
         private readonly Saving _saving;
 
         private Button _button;
 
-        public ActivatingBoostBuyButton(BoostsValueConfig config,
+        public ActivatingBoostBuyButton(BuyingBoost buyingBoost,
                                         BoostMatching boostMatching,
                                         Saving saving)
         {
-            _config = config;
+            _buyingBoost = buyingBoost;
             _boostMatching = boostMatching;
             _saving = saving;
         }
@@ -31,7 +31,7 @@ namespace TamagotchiClicker
             {
                 _button = _boostMatching.Get(i).Buy;
 
-                if (YandexGame.savesData.Money >= _config.GetCost(i))
+                if (YandexGame.savesData.Money >= _buyingBoost.CalculatePrice(i))
                 {
                     SetInteractable(true);
                 }

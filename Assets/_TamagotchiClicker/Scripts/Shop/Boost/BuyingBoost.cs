@@ -33,7 +33,7 @@ namespace TamagotchiClicker
             }
         }
 
-        private ulong CalculatePrice(int index)
+        public ulong CalculatePrice(int index)
         {
             double improvement = _config.GetImprovement(index) * YandexGame.savesData.NumberImprovements[index];
             var startCost = _config.GetCost(index);
