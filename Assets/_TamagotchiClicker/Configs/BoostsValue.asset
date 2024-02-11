@@ -13,33 +13,33 @@ MonoBehaviour:
   m_Name: BoostsValue
   m_EditorClassIdentifier: 
   _boosts:
-  - InitialCost: 5
+  - InitialCost: 15
     GainImprovement: 1
     CostSubsequentImprovements: 1.2
-  - InitialCost: 10
+  - InitialCost: 100
     GainImprovement: 4
     CostSubsequentImprovements: 1.2
-  - InitialCost: 15
+  - InitialCost: 1100
     GainImprovement: 8
     CostSubsequentImprovements: 1.09
-  - InitialCost: 10
-    GainImprovement: 0
-    CostSubsequentImprovements: 0
-  - InitialCost: 0
-    GainImprovement: 0
-    CostSubsequentImprovements: 0
-  - InitialCost: 0
-    GainImprovement: 0
-    CostSubsequentImprovements: 0
-  - InitialCost: 0
-    GainImprovement: 0
-    CostSubsequentImprovements: 0
-  - InitialCost: 0
-    GainImprovement: 0
-    CostSubsequentImprovements: 0
-  - InitialCost: 0
-    GainImprovement: 0
-    CostSubsequentImprovements: 0
-  - InitialCost: 0
-    GainImprovement: 0
-    CostSubsequentImprovements: 0
+  - InitialCost: 12000
+    GainImprovement: 47
+    CostSubsequentImprovements: 1.06
+  - InitialCost: 130000
+    GainImprovement: 260
+    CostSubsequentImprovements: 1.06
+  - InitialCost: 1000000
+    GainImprovement: 1400
+    CostSubsequentImprovements: 1.15
+  - InitialCost: 20000000
+    GainImprovement: 7800
+    CostSubsequentImprovements: 1.15
+  - InitialCost: 330000000
+    GainImprovement: 44000
+    CostSubsequentImprovements: 1.15
+  - InitialCost: 5100000000
+    GainImprovement: 260000
+    CostSubsequentImprovements: 1.15
+  - InitialCost: 75000000000
+    GainImprovement: 1600000
+    CostSubsequentImprovements: 1.15
