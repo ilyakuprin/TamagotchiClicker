@@ -9,33 +9,44 @@ namespace TamagotchiClicker
         private readonly HeroButtonView _heroButtonView;
         private readonly Saving _saving;
         private readonly CostHeroesConfig _config;
+        private readonly CalculationClick _calculationClick;
 
         public ClickingHero(HeroButtonView heroButtonView,
                             Saving saving,
-                            CostHeroesConfig config)
+                            CostHeroesConfig config,
+                            CalculationClick calculationClick)
         {
             _heroButtonView = heroButtonView;
             _saving = saving;
             _config = config;
+            _calculationClick = calculationClick;
         }
 
-        private void OnClick()
+        public void OnAddMoney()
         {
-            if (_config.Get(YandexGame.savesData.NextHeroIndex) > YandexGame.savesData.Money)
+            var nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
+
+            if (nextHeroCost > YandexGame.savesData.Money)
             {
-                YandexGame.savesData.Money++;
+                YandexGame.savesData.Money += _calculationClick.Calculate();
+
+                if (nextHeroCost < YandexGame.savesData.Money)
+                {
+                    YandexGame.savesData.Money = nextHeroCost;
+                }
+
                 _saving.Save();
             }
         }
 
         public void Initialize()
         {
-            _heroButtonView.Pressed += OnClick;
+            _heroButtonView.Pressed += OnAddMoney;
         }
 
         public void Dispose()
         {
-            _heroButtonView.Pressed -= OnClick;
+            _heroButtonView.Pressed -= OnAddMoney;
         }
     }
 }

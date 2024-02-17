@@ -27,7 +27,15 @@ namespace TamagotchiClicker
 
         private void Activate()
         {
-            for (var i = 0; i < YandexGame.savesData.CurrentBoostIndex + 1; i++)
+            var lastIndex = YandexGame.savesData.CurrentBoostIndex + 1;
+            var length = _boostMatching.GetLength();
+
+            if (lastIndex > length)
+            {
+                lastIndex = length;
+            }
+
+            for (var i = 0; i < lastIndex; i++)
             {
                 _button = _boostMatching.Get(i).Buy;
 

@@ -6,7 +6,7 @@ namespace TamagotchiClicker
     public class GameInstaller : MonoInstaller
     {
         [SerializeField] private HeroButtonView _heroButtonView;
-        [SerializeField] private Clicking _clicking;
+        [SerializeField] private Click _click;
         [SerializeField] private ParentCreatedClicks _parentCreatedClicks;
         [SerializeField] private FadeConfig _fadeConfig;
         [SerializeField] private CounterMoneyView _counterMoneyView;
@@ -14,6 +14,9 @@ namespace TamagotchiClicker
         [SerializeField] private HeroMatching _heroMatching;
         [SerializeField] private BoostsValueConfig _boostsValueConfig;
         [SerializeField] private BoostMatching _boostMatching;
+        [SerializeField] private ClickViewUi _clickViewUi;
+        [SerializeField] private FillingClick _fillingClick;
+        [SerializeField] private FillingClickConfig _fillingClickConfig;
 
         public override void InstallBindings()
         {
@@ -27,9 +30,14 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<ActivatingBoostBuyButton>().AsSingle();
             Container.BindInterfacesAndSelfTo<OpeningNextBoost>().AsSingle();
             Container.BindInterfacesAndSelfTo<BuyingBoost>().AsSingle();
+            Container.BindInterfacesAndSelfTo<CalculationClick>().AsSingle();
+            Container.BindInterfacesAndSelfTo<Autoclick>().AsSingle();
+            Container.BindInterfacesAndSelfTo<DevastationFilling>().AsSingle();
+            Container.BindInterfacesAndSelfTo<BoostingClickForClick>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ResettingClickBoost>().AsSingle();
 
             Container.Bind<HeroButtonView>().FromInstance(_heroButtonView).AsSingle();
-            Container.Bind<Clicking>().FromInstance(_clicking).AsSingle();
+            Container.Bind<Click>().FromInstance(_click).AsSingle();
             Container.Bind<ParentCreatedClicks>().FromInstance(_parentCreatedClicks).AsSingle();
 
             Container.Bind<FadeConfig>().FromInstance(_fadeConfig).AsSingle();
@@ -41,6 +49,11 @@ namespace TamagotchiClicker
 
             Container.Bind<BoostsValueConfig>().FromInstance(_boostsValueConfig).AsSingle();
             Container.Bind<BoostMatching>().FromInstance(_boostMatching).AsSingle();
+
+            Container.Bind<ClickViewUi>().FromInstance(_clickViewUi).AsSingle();
+
+            Container.Bind<FillingClick>().FromInstance(_fillingClick).AsSingle();
+            Container.Bind<FillingClickConfig>().FromInstance(_fillingClickConfig).AsSingle();
         }
     }
 }

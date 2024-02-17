@@ -6,27 +6,28 @@ namespace TamagotchiClicker
 {
     public class CreatingClicking : IInitializable
     {
+        private const int NumberClicks = 15;
+
         private readonly DiContainer _diContainer;
-        private readonly Clicking _clicking;
+        private readonly Click _click;
         private readonly ParentCreatedClicks _parent;
 
-        private Clicking[] _clickings;
-        public readonly int _numberClicks = 15;
+        private ClickBehavior[] _clickings;
 
         public CreatingClicking(DiContainer diContainer,
-                                Clicking clicking,
+                                Click click,
                                 ParentCreatedClicks parent)
         {
             _diContainer = diContainer;
-            _clicking = clicking;
+            _click = click;
             _parent = parent;
         }
 
-        public int NumberClicks { get => _numberClicks; }
+        public int GetNumberClicks => NumberClicks;
 
-        public Clicking GetClicking(int index)
+        public ClickBehavior GetClicking(int index)
         {
-            if (index >=0 && index < _numberClicks)
+            if (index >= 0 && index < NumberClicks)
                 return _clickings[index];
             else
                 throw new IndexOutOfRangeException();
@@ -34,22 +35,22 @@ namespace TamagotchiClicker
 
         public void Initialize()
         {
-            _clickings = new Clicking[_numberClicks];
+            _clickings = new ClickBehavior[NumberClicks];
 
-            for (int i = 0; i < _numberClicks; i++)
+            for (int i = 0; i < NumberClicks; i++)
             {
                 _clickings[i] = GetCreatingClicking();
             }
         }
 
-        private Clicking GetCreatingClicking()
+        private ClickBehavior GetCreatingClicking()
         {
-            Clicking clicking = _diContainer.InstantiatePrefabForComponent<Clicking>(_clicking, _parent.Parent);
+            ClickBehavior clickMovement = _diContainer.InstantiatePrefabForComponent<ClickBehavior>(_click, _parent.Parent);
 
             Vector3 mousePos = Input.mousePosition;
-            clicking.transform.position = mousePos;
+            clickMovement.transform.position = mousePos;
 
-            return clicking;
+            return clickMovement;
         }
     }
 }

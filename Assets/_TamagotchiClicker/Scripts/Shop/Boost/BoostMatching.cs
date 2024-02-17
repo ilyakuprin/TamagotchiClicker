@@ -31,7 +31,7 @@ namespace TamagotchiClicker
 
         private void Show()
         {
-            for (var i = YandexGame.savesData.CurrentBoostIndex; i < _boosts.Length; i++)
+            for (var i = YandexGame.savesData.CurrentBoostIndex + 1; i < _boosts.Length; i++)
             {
                 var hero = _boosts[i];
 

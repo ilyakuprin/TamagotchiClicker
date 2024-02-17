@@ -19,15 +19,15 @@ namespace TamagotchiClicker
 
         private void Activate()
         {
-            if (_currentClick >= _creatingClicking.NumberClicks)
+            if (_currentClick >= _creatingClicking.GetNumberClicks)
                 _currentClick = 0;
 
-            Clicking clicking = _creatingClicking.GetClicking(_currentClick);
+            ClickBehavior clickMovement = _creatingClicking.GetClicking(_currentClick);
 
-            if (!clicking.gameObject.activeInHierarchy)
+            if (!clickMovement.gameObject.activeInHierarchy)
             {
-                clicking.transform.position = Input.mousePosition;
-                clicking.gameObject.SetActive(true);
+                clickMovement.transform.position = Input.mousePosition;
+                clickMovement.gameObject.SetActive(true);
                 _currentClick++;
             }
         }

@@ -10,6 +10,8 @@
         public bool promptDone;
 
         public ulong Money;
+        public ulong ClickValue = 1;
+
         public int NextHeroIndex = 1;
 
         public int CurrentBoostIndex;

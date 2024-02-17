@@ -6,6 +6,8 @@ namespace TamagotchiClicker
 {
     public class BuyingBoost : IInitializable, IDisposable
     {
+        public event Action Bought;
+
         private readonly BoostMatching _boostMatching;
         private readonly BoostsValueConfig _config;
         private readonly Saving _saving;
@@ -44,7 +46,7 @@ namespace TamagotchiClicker
         private void ShowPrice(int index, ulong price)
         {
             var boost = _boostMatching.Get(index);
-            boost.Price.text = price.ToString();
+            boost.Price.text = NumberFormat.GetFormattedString(price);
         }
 
         private void SubscribeAllBuyButton()
@@ -59,13 +61,26 @@ namespace TamagotchiClicker
 
         private void Buy(int index)
         {
-            YandexGame.savesData.Money -= CalculatePrice(index);
-
-            YandexGame.savesData.NumberImprovements[index]++;
-            ShowPrice(index, CalculatePrice(index));
+            SubtractMoney(index);
+            UpImprovement(index);
+            UpClick(index);
 
             _saving.Save();
+
+            Bought?.Invoke();
         }
+
+        private void SubtractMoney(int index)
+            => YandexGame.savesData.Money -= CalculatePrice(index);
+
+        private void UpImprovement(int index)
+        {
+            YandexGame.savesData.NumberImprovements[index]++;
+            ShowPrice(index, CalculatePrice(index));
+        }
+
+        private void UpClick(int index)
+            => YandexGame.savesData.ClickValue += _config.GetGainImprovement(index);
 
         public void Dispose()
             => UnsubscribeAllBuyButton();

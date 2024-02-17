@@ -23,8 +23,8 @@ namespace TamagotchiClicker
 
         private void Show()
             => _text.text = string.Format(FormatString,
-                                          YandexGame.savesData.Money,
-                                          _config.Get(YandexGame.savesData.NextHeroIndex));
+                                          NumberFormat.GetFormattedString(YandexGame.savesData.Money),
+                                          NumberFormat.GetFormattedString(_config.Get(YandexGame.savesData.NextHeroIndex)));
 
         private void OnEnable()
             => _saving.SaveDataReceived += Show;
