@@ -10,6 +10,7 @@ namespace TamagotchiClicker
 
         [SerializeField] private Button _hero;
         [field: SerializeField] public Image ImageHero { get; private set; }
+        [field: SerializeField] public RectTransform RectTransformHero { get; private set; }
 
         private void Press()
             => Pressed?.Invoke();

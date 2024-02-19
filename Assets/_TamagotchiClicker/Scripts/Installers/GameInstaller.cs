@@ -17,6 +17,8 @@ namespace TamagotchiClicker
         [SerializeField] private ClickViewUi _clickViewUi;
         [SerializeField] private FillingClick _fillingClick;
         [SerializeField] private FillingClickConfig _fillingClickConfig;
+        [SerializeField] private GettingStartPosition _gettingStartPosition;
+        [SerializeField] private ParasiteConfig _parasiteConfig;
 
         public override void InstallBindings()
         {
@@ -35,6 +37,7 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<DevastationFilling>().AsSingle();
             Container.BindInterfacesAndSelfTo<BoostingClickForClick>().AsSingle();
             Container.BindInterfacesAndSelfTo<ResettingClickBoost>().AsSingle();
+            Container.BindInterfacesAndSelfTo<AppearanceParasite>().AsSingle();
 
             Container.Bind<HeroButtonView>().FromInstance(_heroButtonView).AsSingle();
             Container.Bind<Click>().FromInstance(_click).AsSingle();
@@ -54,6 +57,9 @@ namespace TamagotchiClicker
 
             Container.Bind<FillingClick>().FromInstance(_fillingClick).AsSingle();
             Container.Bind<FillingClickConfig>().FromInstance(_fillingClickConfig).AsSingle();
+
+            Container.Bind<GettingStartPosition>().FromInstance(_gettingStartPosition).AsSingle();
+            Container.Bind<ParasiteConfig>().FromInstance(_parasiteConfig).AsSingle();
         }
     }
 }

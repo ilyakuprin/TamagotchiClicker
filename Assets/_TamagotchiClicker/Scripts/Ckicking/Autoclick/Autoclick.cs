@@ -1,15 +1,15 @@
+using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 using Zenject;
 
 namespace TamagotchiClicker
 {
-    public class Autoclick : IInitializable
+    public class Autoclick : IInitializable, IDisposable
     {
         private const float TimeSec = 1f;
-        private float _stopwatch;
-
         private readonly ClickingHero _clickingHero;
+        private CancellationTokenSource _cts;
 
         public Autoclick(ClickingHero clickingHero)
         {
@@ -17,26 +17,31 @@ namespace TamagotchiClicker
         }
 
         public void Initialize()
-            => StartTimer();
+        {
+            _cts = new CancellationTokenSource();
+            StartTimer();
+        } 
 
         private void StartTimer()
             => Timer().Forget();
 
         private async UniTask Timer()
         {
-            _stopwatch = 0;
-
-            while (_stopwatch < TimeSec)
+            await UniTask.WaitForSeconds(TimeSec);
+            if (!_cts.IsCancellationRequested)
             {
-                await UniTask.NextFrame();
-                _stopwatch += Time.deltaTime;
+                Add();
+                StartTimer();
             }
-
-            Add();
-            StartTimer();
         }
 
         private void Add()
             => _clickingHero.OnAddMoney();
+
+        public void Dispose()
+        {
+            _cts.Cancel();
+            _cts.Dispose();
+        } 
     }
 }
