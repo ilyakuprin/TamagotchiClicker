@@ -6576,7 +6576,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -17785,6 +17785,7 @@ GameObject:
   - component: {fileID: 2070610154}
   - component: {fileID: 2070610153}
   - component: {fileID: 2070610155}
+  - component: {fileID: 2070610156}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -17807,6 +17808,7 @@ MonoBehaviour:
   _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: 2070610155}
+  - {fileID: 2070610156}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -17864,6 +17866,18 @@ MonoBehaviour:
   _fillingClick: {fileID: 1529942065}
   _fillingClickConfig: {fileID: 11400000, guid: 7bc78410844aa994a8ff236600f9cb53, type: 2}
   _gettingStartPosition: {fileID: 1529942066}
+--- !u!114 &2070610156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070610152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d13141cf22b004b9f473d1f1400685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _parasiteConfig: {fileID: 11400000, guid: 6e090a214ec396443b90709c2f4c8f23, type: 2}
 --- !u!1 &2089381030
 GameObject:

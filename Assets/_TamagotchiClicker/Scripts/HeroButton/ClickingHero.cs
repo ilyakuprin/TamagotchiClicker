@@ -6,17 +6,17 @@ namespace TamagotchiClicker
 {
     public class ClickingHero : IInitializable, IDisposable
     {
-        private readonly HeroButtonView _heroButtonView;
+        private readonly HeroView _heroView;
         private readonly Saving _saving;
         private readonly CostHeroesConfig _config;
         private readonly CalculationClick _calculationClick;
 
-        public ClickingHero(HeroButtonView heroButtonView,
+        public ClickingHero(HeroView heroView,
                             Saving saving,
                             CostHeroesConfig config,
                             CalculationClick calculationClick)
         {
-            _heroButtonView = heroButtonView;
+            _heroView = heroView;
             _saving = saving;
             _config = config;
             _calculationClick = calculationClick;
@@ -41,12 +41,12 @@ namespace TamagotchiClicker
 
         public void Initialize()
         {
-            _heroButtonView.Pressed += OnAddMoney;
+            _heroView.Pressed += OnAddMoney;
         }
 
         public void Dispose()
         {
-            _heroButtonView.Pressed -= OnAddMoney;
+            _heroView.Pressed -= OnAddMoney;
         }
     }
 }

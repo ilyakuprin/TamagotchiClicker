@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 using Zenject;
 
 namespace TamagotchiClicker
@@ -40,8 +41,11 @@ namespace TamagotchiClicker
 
         public void Dispose()
         {
-            _cts.Cancel();
-            _cts.Dispose();
+            if (!_cts.IsCancellationRequested)
+            {
+                _cts.Cancel();
+                _cts.Dispose();
+            }
         } 
     }
 }

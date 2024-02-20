@@ -6,14 +6,14 @@ namespace TamagotchiClicker
 {
     public class ActivatingClicking : IInitializable, IDisposable
     { 
-        private readonly HeroButtonView _heroButtonView;
+        private readonly HeroView _heroView;
         private readonly CreatingClicking _creatingClicking;
         private int _currentClick = 0;
 
-        public ActivatingClicking(HeroButtonView heroButtonView,
+        public ActivatingClicking(HeroView heroView,
                                   CreatingClicking creatingClicking)
         {
-            _heroButtonView = heroButtonView;
+            _heroView = heroView;
             _creatingClicking = creatingClicking;
         }
 
@@ -34,12 +34,12 @@ namespace TamagotchiClicker
 
         public void Initialize()
         {
-            _heroButtonView.Pressed += Activate;
+            _heroView.Pressed += Activate;
         }
 
         public void Dispose()
         {
-            _heroButtonView.Pressed -= Activate;
+            _heroView.Pressed -= Activate;
         }
     }
 }

@@ -12,14 +12,14 @@ namespace TamagotchiClicker
         [field: SerializeField] public Image Filling { get; private set; }
         
         private FillingClickConfig _fillingClickConfig;
-        private HeroButtonView _heroButtonView;
+        private HeroView _heroView;
 
         [Inject]
         public void Construct(FillingClickConfig fillingClickConfig,
-                              HeroButtonView heroButtonView)
+                              HeroView heroView)
         {
             _fillingClickConfig = fillingClickConfig;
-            _heroButtonView = heroButtonView;
+            _heroView = heroView;
         }
 
         private void Awake()
@@ -33,9 +33,9 @@ namespace TamagotchiClicker
         } 
 
         private void OnEnable()
-            => _heroButtonView.Pressed += Fill;
+            => _heroView.Pressed += Fill;
 
         private void OnDisable()
-            => _heroButtonView.Pressed -= Fill;
+            => _heroView.Pressed -= Fill;
     }
 }

@@ -7,10 +7,10 @@ namespace TamagotchiClicker
     public class ChangingHeroOnScreen : IInitializable, IDisposable
     {
         private readonly HeroMatching _heroMatching;
-        private readonly HeroButtonView _mainHero;
+        private readonly HeroView _mainHero;
 
         public ChangingHeroOnScreen(HeroMatching heroMatching,
-                                    HeroButtonView mainHero)
+                                    HeroView mainHero)
         {
             _heroMatching = heroMatching;
             _mainHero = mainHero;

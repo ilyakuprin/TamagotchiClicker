@@ -5,7 +5,7 @@ namespace TamagotchiClicker
 {
     public class GameInstaller : MonoInstaller
     {
-        [SerializeField] private HeroButtonView _heroButtonView;
+        [SerializeField] private HeroView _heroView;
         [SerializeField] private Click _click;
         [SerializeField] private ParentCreatedClicks _parentCreatedClicks;
         [SerializeField] private FadeConfig _fadeConfig;
@@ -18,7 +18,6 @@ namespace TamagotchiClicker
         [SerializeField] private FillingClick _fillingClick;
         [SerializeField] private FillingClickConfig _fillingClickConfig;
         [SerializeField] private GettingStartPosition _gettingStartPosition;
-        [SerializeField] private ParasiteConfig _parasiteConfig;
 
         public override void InstallBindings()
         {
@@ -37,9 +36,8 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<DevastationFilling>().AsSingle();
             Container.BindInterfacesAndSelfTo<BoostingClickForClick>().AsSingle();
             Container.BindInterfacesAndSelfTo<ResettingClickBoost>().AsSingle();
-            Container.BindInterfacesAndSelfTo<AppearanceParasite>().AsSingle();
 
-            Container.Bind<HeroButtonView>().FromInstance(_heroButtonView).AsSingle();
+            Container.Bind<HeroView>().FromInstance(_heroView).AsSingle();
             Container.Bind<Click>().FromInstance(_click).AsSingle();
             Container.Bind<ParentCreatedClicks>().FromInstance(_parentCreatedClicks).AsSingle();
 
@@ -59,7 +57,6 @@ namespace TamagotchiClicker
             Container.Bind<FillingClickConfig>().FromInstance(_fillingClickConfig).AsSingle();
 
             Container.Bind<GettingStartPosition>().FromInstance(_gettingStartPosition).AsSingle();
-            Container.Bind<ParasiteConfig>().FromInstance(_parasiteConfig).AsSingle();
         }
     }
 }
