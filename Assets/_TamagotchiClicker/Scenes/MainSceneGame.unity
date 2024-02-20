@@ -12665,10 +12665,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529942054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0539e6d96ab8f64292ce7dcf913ca12, type: 3}
+  m_Script: {fileID: 11500000, guid: d3871a747e36cd84b8b30eed86ee57e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parasite: {fileID: 387891794}
+  _button: {fileID: 387891797}
+  <RectTransformParasite>k__BackingField: {fileID: 387891794}
 --- !u!1 &1531307594
 GameObject:
   m_ObjectHideFlags: 0
@@ -17853,7 +17854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef3a701b3d5a284b89cadf9294d4625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heroButtonView: {fileID: 1529942056}
+  _heroView: {fileID: 0}
   _click: {fileID: 9198731233767149129, guid: b1f49ee7b8c60cf4e98abfdf34c12848, type: 3}
   _parentCreatedClicks: {fileID: 1529942057}
   _fadeConfig: {fileID: 11400000, guid: 65bec4ca833980d4abcb8c8b07ae987f, type: 2}
@@ -17879,6 +17880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parasiteConfig: {fileID: 11400000, guid: 6e090a214ec396443b90709c2f4c8f23, type: 2}
+  _parasiteView: {fileID: 0}
 --- !u!1 &2089381030
 GameObject:
   m_ObjectHideFlags: 0
