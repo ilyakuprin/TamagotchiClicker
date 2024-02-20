@@ -8,19 +8,23 @@ namespace TamagotchiClicker
         private readonly AppearanceParasite _appearanceParasite;
         private readonly HeroView _hero;
         private readonly Autoclick _autoclick;
+        private readonly ClickingParasite _clickingParasite;
 
         public SettingActivationClicks(AppearanceParasite appearanceParasite,
                                HeroView hero,
-                               Autoclick autoclick)
+                               Autoclick autoclick,
+                               ClickingParasite clickingParasite)
         {
             _appearanceParasite = appearanceParasite;
             _hero = hero;
             _autoclick = autoclick;
+            _clickingParasite = clickingParasite;
         }
 
         public void Initialize()
         {
             _appearanceParasite.TimePassed += Disable;
+            _clickingParasite.ClicksCompleted += Enable;
         }
 
         private void Disable()
@@ -29,9 +33,16 @@ namespace TamagotchiClicker
             _autoclick.Dispose();
         }
 
+        private void Enable()
+        {
+            _hero.EnableButton();
+            _autoclick.Initialize();
+        }
+
         public void Dispose()
         {
             _appearanceParasite.TimePassed -= Disable;
+            _clickingParasite.ClicksCompleted -= Enable;
         }
     }
 }

@@ -6,11 +6,11 @@ namespace TamagotchiClicker
 {
     public class MovementParasite : IInitializable, IDisposable
     {
-        private GettingStartPosition _gettingStartPosition;
-        private HeroView _hero;
-        private ParasiteConfig _parasiteConfig;
-        private AppearanceParasite _appearanceParasite;
-        private ParasiteView _parasiteView;
+        private readonly GettingStartPosition _gettingStartPosition;
+        private readonly HeroView _hero;
+        private readonly ParasiteConfig _parasiteConfig;
+        private readonly AppearanceParasite _appearanceParasite;
+        private readonly ParasiteView _parasiteView;
 
         private MovementParasite(GettingStartPosition gettingStartPosition,
                                  HeroView hero,
