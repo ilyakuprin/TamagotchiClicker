@@ -56,7 +56,6 @@ namespace TamagotchiClicker
                 else
                 {
                     Add();
-                    _clickingParasite.DriveAwayParasite();
                     return;
                 }
             }
