@@ -7,20 +7,20 @@ namespace TamagotchiClicker
     {
         private readonly ParasiteView _parasiteView;
         private readonly ClickingParasite _clickingParasite;
-        private readonly AppearanceParasite _appearanceParasite;
+        private readonly Appearance _appearance;
 
         public SettingActivationParasite(ParasiteView parasiteView,
                                          ClickingParasite clickingParasite,
-                                         AppearanceParasite appearanceParasite)
+                                         AppearanceParasite appearance)
         {
             _parasiteView = parasiteView;
             _clickingParasite = clickingParasite;
-            _appearanceParasite = appearanceParasite;
+            _appearance = appearance;
         }
 
         public void Initialize()
         {
-            _appearanceParasite.TimePassed += Enable;
+            _appearance.TimePassed += Enable;
             _clickingParasite.ClicksCompleted += Disable;
         }
 
@@ -31,11 +31,11 @@ namespace TamagotchiClicker
             => SetActive(false);
 
         private void SetActive(bool value)
-            => _parasiteView.RectTransformParasite.gameObject.SetActive(value);
+            => _parasiteView.RectTransformObject.gameObject.SetActive(value);
 
         public void Dispose()
         {
-            _appearanceParasite.TimePassed -= Enable;
+            _appearance.TimePassed -= Enable;
             _clickingParasite.ClicksCompleted -= Disable;
         }
     }

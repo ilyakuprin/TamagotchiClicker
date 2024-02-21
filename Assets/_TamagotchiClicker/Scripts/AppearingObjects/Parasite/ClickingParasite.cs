@@ -9,17 +9,17 @@ namespace TamagotchiClicker
 
         private readonly ParasiteView _parasiteView;
         private readonly ParasiteConfig _parasiteConfig;
-        private readonly AppearanceParasite _appearanceParasite;
+        private readonly AppearanceParasite _appearance;
 
         private int _counterClick;
 
         public ClickingParasite(ParasiteView parasiteView,
                                 ParasiteConfig parasiteConfig,
-                                AppearanceParasite appearanceParasite)
+                                AppearanceParasite appearance)
         {
             _parasiteView = parasiteView;
             _parasiteConfig = parasiteConfig;
-            _appearanceParasite = appearanceParasite;
+            _appearance = appearance;
         }
 
         public void Initialize()
@@ -46,7 +46,7 @@ namespace TamagotchiClicker
         }
 
         private void StartTimer()
-            => _appearanceParasite.Initialize();
+            => _appearance.Initialize();
 
         private void ResetClicks()
             => _counterClick = 0;

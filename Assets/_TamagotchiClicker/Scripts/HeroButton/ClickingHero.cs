@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 using YG;
 using Zenject;
 
@@ -29,6 +30,26 @@ namespace TamagotchiClicker
             if (nextHeroCost > YandexGame.savesData.Money)
             {
                 YandexGame.savesData.Money += _calculationClick.Calculate();
+
+                if (nextHeroCost < YandexGame.savesData.Money)
+                {
+                    YandexGame.savesData.Money = nextHeroCost;
+                }
+
+                _saving.Save();
+            }
+        }
+
+        public void AddMoney(ulong value)
+        {
+            var nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
+
+            Debug.Log(value);
+            Debug.Log(nextHeroCost + " > " + value + YandexGame.savesData.Money);
+
+            if (nextHeroCost > value + YandexGame.savesData.Money)
+            {
+                YandexGame.savesData.Money += value;
 
                 if (nextHeroCost < YandexGame.savesData.Money)
                 {

@@ -13,9 +13,10 @@ namespace TamagotchiClicker
             Container.Bind<ParasiteConfig>().FromInstance(_parasiteConfig).AsSingle();
             Container.Bind<ParasiteView>().FromInstance(_parasiteView).AsSingle();
 
-            Container.BindInterfacesAndSelfTo<AppearanceParasite>().AsSingle();
+            Container.BindInterfacesAndSelfTo<AppearanceParasite>().AsSingle().WithArguments(_parasiteConfig);
+
             Container.BindInterfacesAndSelfTo<SettingActivationClicks>().AsSingle();
-            Container.BindInterfacesAndSelfTo<MovementParasite>().AsSingle();
+            Container.BindInterfacesAndSelfTo<MovingParasite>().AsSingle();
             Container.BindInterfacesAndSelfTo<SettingActivationParasite>().AsSingle();
             Container.BindInterfacesAndSelfTo<ClickingParasite>().AsSingle();
             Container.BindInterfacesAndSelfTo<ParasiteActivity>().AsSingle().NonLazy();

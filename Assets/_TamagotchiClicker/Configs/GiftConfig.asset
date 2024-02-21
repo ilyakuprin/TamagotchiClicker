@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb81986c7200ea74c8775ca289dc3d31, type: 3}
-  m_Name: ParasiteConfig
+  m_Script: {fileID: 11500000, guid: 44bf208b23ba04f4ba0eb8391e63d6b9, type: 3}
+  m_Name: GiftConfig
   m_EditorClassIdentifier: 
-  <NumberClicks>k__BackingField: 3
-  <MoveTime>k__BackingField: 1
-  <MultiplierCoinSubtraction>k__BackingField: 0.3
-  <MaxSubtractionTimeSec>k__BackingField: 5
-  _occurrenceFrequencyInSec: 3
+  <MoveTime>k__BackingField: 3
+  _occurrenceFrequencyInSec: 2

@@ -5,28 +5,28 @@ namespace TamagotchiClicker
 {
     public class SubscribeParasiteActivity : IInitializable, IDisposable
     {
-        private readonly AppearanceParasite _appearanceParasite;
+        private readonly AppearanceParasite _appearance;
         private readonly ClickingParasite _clickingParasite;
         private readonly ParasiteActivity _parasiteActivity;
 
-        public SubscribeParasiteActivity(AppearanceParasite appearanceParasite,
+        public SubscribeParasiteActivity(AppearanceParasite appearance,
                                          ClickingParasite clickingParasite,
                                          ParasiteActivity parasiteActivity)
         {
-            _appearanceParasite = appearanceParasite;
+            _appearance = appearance;
             _clickingParasite = clickingParasite;
             _parasiteActivity = parasiteActivity;
         }
 
         public void Initialize()
         {
-            _appearanceParasite.TimePassed += _parasiteActivity.StartActivity;
+            _appearance.TimePassed += _parasiteActivity.StartActivity;
             _clickingParasite.ClicksCompleted += _parasiteActivity.StopActivity;
         }
 
         public void Dispose()
         {
-            _appearanceParasite.TimePassed -= _parasiteActivity.StartActivity;
+            _appearance.TimePassed -= _parasiteActivity.StartActivity;
             _clickingParasite.ClicksCompleted -= _parasiteActivity.StopActivity;
         }
     }
