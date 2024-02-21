@@ -8,6 +8,8 @@ namespace TamagotchiClicker
 {
     public class MovingGift : IInitializable, IDisposable
     {
+        public event Action MovementOver;
+
         private readonly GettingStartPosition _gettingStartPosition;
         private readonly GettingEndPosition _gettingEndPosition;
         private readonly Appearance _appearance;
@@ -68,6 +70,8 @@ namespace TamagotchiClicker
                     break;
                 }
             }
+
+            MovementOver?.Invoke();
         }
 
         public void Dispose()

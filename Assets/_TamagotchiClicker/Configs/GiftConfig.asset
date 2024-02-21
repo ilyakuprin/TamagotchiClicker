@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: GiftConfig
   m_EditorClassIdentifier: 
   <MoveTime>k__BackingField: 3
+  <RewardMultiplier>k__BackingField: 0.5
   _occurrenceFrequencyInSec: 2

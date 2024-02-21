@@ -15,5 +15,5 @@ MonoBehaviour:
   <NumberClicks>k__BackingField: 3
   <MoveTime>k__BackingField: 1
   <MultiplierCoinSubtraction>k__BackingField: 0.3
-  <MaxSubtractionTimeSec>k__BackingField: 5
-  _occurrenceFrequencyInSec: 3
+  <MaxSubtractionTimeSec>k__BackingField: 20
+  _occurrenceFrequencyInSec: 120

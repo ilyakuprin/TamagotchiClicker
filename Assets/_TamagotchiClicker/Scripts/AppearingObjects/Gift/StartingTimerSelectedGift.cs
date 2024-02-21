@@ -3,12 +3,12 @@ using Zenject;
 
 namespace TamagotchiClicker
 {
-    public class StartingTimerGift : IInitializable, IDisposable
+    public class StartingTimerSelectedGift : IInitializable, IDisposable
     {
         private readonly Appearance _appearance;
         private readonly GiftView _giftView;
 
-        public StartingTimerGift(AppearanceGift appearance,
+        public StartingTimerSelectedGift(AppearanceGift appearance,
                                  GiftView giftView)
         {
             _appearance = appearance;

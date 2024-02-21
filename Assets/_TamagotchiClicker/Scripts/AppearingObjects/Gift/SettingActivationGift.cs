@@ -15,6 +15,8 @@ namespace TamagotchiClicker
             _appearance = appearanceGift;
         }
 
+        public bool GetActive { get => _giftView.RectTransformObject.gameObject.activeInHierarchy; }
+
         public void Initialize()
         {
             _appearance.TimePassed += Enable;

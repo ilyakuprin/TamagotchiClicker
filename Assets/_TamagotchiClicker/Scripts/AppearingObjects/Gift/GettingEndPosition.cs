@@ -7,7 +7,7 @@ namespace TamagotchiClicker
     public class GettingEndPosition : GettingRandomPosition
     {
         private void Awake()
-            => SetArray(new Func<Vector2>[] { GetBottom, GetLeft, GetUp });
+            => SetArray(new Func<Vector2>[] { GetBottom, GetLeft, GetUp, GetRight });
 
         private Vector2 GetRight()
         {

@@ -9,13 +9,16 @@ namespace TamagotchiClicker
 
         [SerializeField] private RectTransform _gift;
         [SerializeField] private RectTransform[] _points = new RectTransform[CountPoints];
-        [SerializeField, Range(0, 1)] private float _path;
+        [SerializeField, Range(0f, 1f)] private float _path;
 
         [Inject]
         private void Construct(GiftView giftView)
         {
             _gift = giftView.RectTransformObject;
         }
+
+        private void Awake()
+            => ChangePosition(0f);
 
         public void SetStartPosition(Vector2 position)
             => _points[0].anchoredPosition = position;

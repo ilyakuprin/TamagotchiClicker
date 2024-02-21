@@ -22,7 +22,8 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<MovingGift>().AsSingle();
             Container.BindInterfacesAndSelfTo<ReceivingMoneyGift>().AsSingle();
             Container.BindInterfacesAndSelfTo<SettingActivationGift>().AsSingle();
-            Container.BindInterfacesAndSelfTo<StartingTimerGift>().AsSingle();
+            Container.BindInterfacesAndSelfTo<StartingTimerSelectedGift>().AsSingle();
+            Container.BindInterfacesAndSelfTo<StartingTimerUnselectedGift>().AsSingle();
         }
     }
 }

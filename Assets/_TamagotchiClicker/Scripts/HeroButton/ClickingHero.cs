@@ -12,6 +12,8 @@ namespace TamagotchiClicker
         private readonly CostHeroesConfig _config;
         private readonly CalculationClick _calculationClick;
 
+        private ulong _nextHeroCost;
+
         public ClickingHero(HeroView heroView,
                             Saving saving,
                             CostHeroesConfig config,
@@ -25,16 +27,13 @@ namespace TamagotchiClicker
 
         public void OnAddMoney()
         {
-            var nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
+            _nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
 
-            if (nextHeroCost > YandexGame.savesData.Money)
+            if (IsLessMax(YandexGame.savesData.Money))
             {
                 YandexGame.savesData.Money += _calculationClick.Calculate();
 
-                if (nextHeroCost < YandexGame.savesData.Money)
-                {
-                    YandexGame.savesData.Money = nextHeroCost;
-                }
+                CheckNoMoreMax();
 
                 _saving.Save();
             }
@@ -42,21 +41,26 @@ namespace TamagotchiClicker
 
         public void AddMoney(ulong value)
         {
-            var nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
+            _nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
 
-            Debug.Log(value);
-            Debug.Log(nextHeroCost + " > " + value + YandexGame.savesData.Money);
-
-            if (nextHeroCost > value + YandexGame.savesData.Money)
+            if (IsLessMax(value + YandexGame.savesData.Money))
             {
                 YandexGame.savesData.Money += value;
 
-                if (nextHeroCost < YandexGame.savesData.Money)
-                {
-                    YandexGame.savesData.Money = nextHeroCost;
-                }
+                CheckNoMoreMax();
 
                 _saving.Save();
+            }
+        }
+
+        private bool IsLessMax(ulong value)
+            => (_nextHeroCost > value);
+
+        private void CheckNoMoreMax()
+        {
+            if (_nextHeroCost < YandexGame.savesData.Money)
+            {
+                YandexGame.savesData.Money = _nextHeroCost;
             }
         }
 
