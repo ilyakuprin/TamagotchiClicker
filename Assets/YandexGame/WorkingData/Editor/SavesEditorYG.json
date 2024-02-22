@@ -1,16 +1,16 @@
 {
-    "idSave": 7400,
+    "idSave": 8033,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "Money": 394,
-    "ClickValue": 77,
-    "NextHeroIndex": 1,
+    "Money": 13851,
+    "ClickValue": 171,
+    "NextHeroIndex": 3,
     "CurrentBoostIndex": 3,
     "NumberImprovements": [
-        20,
+        38,
+        21,
         6,
-        4,
         0,
         0,
         0,
@@ -19,6 +19,6 @@
         0,
         0
     ],
-    "IndexSelectedHero": 0,
-    "Mute": false
+    "IndexSelectedHero": 2,
+    "Mute": true
 }
