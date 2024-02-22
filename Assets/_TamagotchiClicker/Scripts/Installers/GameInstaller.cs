@@ -11,13 +11,14 @@ namespace TamagotchiClicker
         [SerializeField] private FadeConfig _fadeConfig;
         [SerializeField] private CounterMoneyView _counterMoneyView;
         [SerializeField] private CostHeroesConfig _costHeroesConfig;
-        [SerializeField] private HeroMatching _heroMatching;
+        
         [SerializeField] private BoostsValueConfig _boostsValueConfig;
         [SerializeField] private BoostMatching _boostMatching;
         [SerializeField] private ClickViewUi _clickViewUi;
         [SerializeField] private FillingClick _fillingClick;
         [SerializeField] private FillingClickConfig _fillingClickConfig;
         [SerializeField] private GettingStartPosition _gettingStartPosition;
+        [SerializeField] private SettingMuteAudio _settingMuteAudio;
 
         public override void InstallBindings()
         {
@@ -25,9 +26,6 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<ClickingHero>().AsSingle();
             Container.BindInterfacesAndSelfTo<CreatingClicking>().AsSingle();
             Container.BindInterfacesAndSelfTo<ActivatingClicking>().AsSingle();
-            Container.BindInterfacesAndSelfTo<ActivatingHeroBuyButton>().AsSingle();
-            Container.BindInterfacesAndSelfTo<ChangingHeroOnScreen>().AsSingle();
-            Container.BindInterfacesAndSelfTo<BuyingHero>().AsSingle();
             Container.BindInterfacesAndSelfTo<ActivatingBoostBuyButton>().AsSingle();
             Container.BindInterfacesAndSelfTo<OpeningNextBoost>().AsSingle();
             Container.BindInterfacesAndSelfTo<BuyingBoost>().AsSingle();
@@ -46,7 +44,6 @@ namespace TamagotchiClicker
             Container.Bind<CounterMoneyView>().FromInstance(_counterMoneyView).AsSingle();
 
             Container.Bind<CostHeroesConfig>().FromInstance(_costHeroesConfig).AsSingle();
-            Container.Bind<HeroMatching>().FromInstance(_heroMatching).AsSingle();
 
             Container.Bind<BoostsValueConfig>().FromInstance(_boostsValueConfig).AsSingle();
             Container.Bind<BoostMatching>().FromInstance(_boostMatching).AsSingle();
@@ -57,6 +54,8 @@ namespace TamagotchiClicker
             Container.Bind<FillingClickConfig>().FromInstance(_fillingClickConfig).AsSingle();
 
             Container.Bind<GettingStartPosition>().FromInstance(_gettingStartPosition).AsSingle();
+
+            Container.Bind<SettingMuteAudio>().FromInstance(_settingMuteAudio).AsSingle();
         }
     }
 }

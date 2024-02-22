@@ -16,5 +16,8 @@
 
         public int CurrentBoostIndex;
         public ulong[] NumberImprovements = new ulong[10];
+
+        public int IndexSelectedHero;
+        public bool Mute;
     }
 }

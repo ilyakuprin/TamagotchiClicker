@@ -37,7 +37,12 @@ namespace TamagotchiClicker
         }
 
         private void ChangeSprite(Sprite spriteHero)
-            => _background.sprite = spriteHero;
+        {
+            if (_background.sprite != spriteHero)
+            {
+                _background.sprite = spriteHero;
+            }
+        } 
 
         private void OnEnable()
             => SubscribeOnBuyButton();

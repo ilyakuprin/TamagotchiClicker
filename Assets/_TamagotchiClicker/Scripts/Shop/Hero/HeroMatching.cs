@@ -13,6 +13,7 @@ namespace TamagotchiClicker
         public Sprite NotActive;
         public Sprite Active;
         public Sprite Background;
+        public AudioClip BackMusic;
     }
 
     public class HeroMatching : MonoBehaviour

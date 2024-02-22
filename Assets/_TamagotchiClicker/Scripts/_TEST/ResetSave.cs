@@ -17,6 +17,8 @@ public class ResetSave : MonoBehaviour
         YandexGame.savesData.NextHeroIndex = 1;
         YandexGame.savesData.CurrentBoostIndex = 0;
         YandexGame.savesData.NumberImprovements = new ulong[10];
+        YandexGame.savesData.IndexSelectedHero = 0;
+        YandexGame.savesData.Mute = false;
 
         _saving.Save();
 
