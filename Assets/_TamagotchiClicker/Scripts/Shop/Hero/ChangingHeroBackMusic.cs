@@ -39,7 +39,7 @@ namespace TamagotchiClicker
             }
         }
 
-        private void ChangeAudio(AudioClip audioClip)
+        public void ChangeAudio(AudioClip audioClip)
         {
             _backMusicView.Change(audioClip);
         }

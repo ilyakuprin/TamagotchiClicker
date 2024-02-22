@@ -39,7 +39,7 @@ namespace TamagotchiClicker
             }
         }
 
-        private void ChangeSprite(Sprite spriteHero)
+        public void ChangeSprite(Sprite spriteHero)
         {
             _mainHero.ImageHero.sprite = spriteHero;
             _mainHero.ImageHero.SetNativeSize();

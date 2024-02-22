@@ -34,6 +34,7 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<DevastationFilling>().AsSingle();
             Container.BindInterfacesAndSelfTo<BoostingClickForClick>().AsSingle();
             Container.BindInterfacesAndSelfTo<ResettingClickBoost>().AsSingle();
+            Container.BindInterfacesAndSelfTo<MemorizationPressedHeroButtonShop>().AsSingle();
 
             Container.Bind<HeroView>().FromInstance(_heroView).AsSingle();
             Container.Bind<Click>().FromInstance(_click).AsSingle();

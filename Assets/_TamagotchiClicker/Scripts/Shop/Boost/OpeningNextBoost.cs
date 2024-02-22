@@ -56,7 +56,6 @@ namespace TamagotchiClicker
             {
                 var boost = _boostMatching.Get(index);
                 boost.Image.sprite = boost.Active;
-                Debug.Log(boost.Active);
             }
         }
 
