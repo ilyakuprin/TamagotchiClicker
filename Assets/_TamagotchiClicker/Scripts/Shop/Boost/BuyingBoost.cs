@@ -11,14 +11,17 @@ namespace TamagotchiClicker
         private readonly BoostMatching _boostMatching;
         private readonly BoostsValueConfig _config;
         private readonly Saving _saving;
+        private readonly ShowingNumberImprovements _showingNumberImprovements;
 
         public BuyingBoost(BoostMatching boostMatching,
                             BoostsValueConfig config,
-                            Saving saving)
+                            Saving saving,
+                            ShowingNumberImprovements showingNumberImprovements)
         {
             _boostMatching = boostMatching;
             _config = config;
             _saving = saving;
+            _showingNumberImprovements = showingNumberImprovements;
         }
 
         public void Initialize()
@@ -76,6 +79,7 @@ namespace TamagotchiClicker
         private void UpImprovement(int index)
         {
             YandexGame.savesData.NumberImprovements[index]++;
+            _showingNumberImprovements.ChangeNumber(index);
             ShowPrice(index, CalculatePrice(index));
         }
 

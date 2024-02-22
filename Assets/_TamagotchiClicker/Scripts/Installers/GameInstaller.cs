@@ -19,6 +19,7 @@ namespace TamagotchiClicker
         [SerializeField] private FillingClickConfig _fillingClickConfig;
         [SerializeField] private GettingStartPosition _gettingStartPosition;
         [SerializeField] private SettingMuteAudio _settingMuteAudio;
+        [SerializeField] private ShowingNumberImprovements _showingNumberImprovements;
 
         public override void InstallBindings()
         {
@@ -57,6 +58,7 @@ namespace TamagotchiClicker
             Container.Bind<GettingStartPosition>().FromInstance(_gettingStartPosition).AsSingle();
 
             Container.Bind<SettingMuteAudio>().FromInstance(_settingMuteAudio).AsSingle();
+            Container.Bind<ShowingNumberImprovements>().FromInstance(_showingNumberImprovements).AsSingle();
         }
     }
 }

@@ -3766,7 +3766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &406707862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10125,8 +10125,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2114531423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13137,6 +13137,7 @@ GameObject:
   - component: {fileID: 1529942067}
   - component: {fileID: 1529942069}
   - component: {fileID: 1529942068}
+  - component: {fileID: 1529942071}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13484,6 +13485,29 @@ MonoBehaviour:
   <bottomLeftCorner>k__BackingField: {fileID: 737409529}
   <upperLeftCorner>k__BackingField: {fileID: 988132982}
   <upperRightCorner>k__BackingField: {fileID: 1456330803}
+--- !u!114 &1529942071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529942054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10730d6f0d05af445b51cb15abb6feaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _texts:
+  - {fileID: 433944207}
+  - {fileID: 1788122414}
+  - {fileID: 826392336}
+  - {fileID: 127451065}
+  - {fileID: 890504676}
+  - {fileID: 868420011}
+  - {fileID: 717178404}
+  - {fileID: 892204306}
+  - {fileID: 1413049010}
+  - {fileID: 1379500361}
 --- !u!1 &1531307594
 GameObject:
   m_ObjectHideFlags: 0
@@ -13963,7 +13987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1554558784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18991,6 +19015,7 @@ MonoBehaviour:
   _fillingClickConfig: {fileID: 11400000, guid: 7bc78410844aa994a8ff236600f9cb53, type: 2}
   _gettingStartPosition: {fileID: 1529942066}
   _settingMuteAudio: {fileID: 1843866963}
+  _showingNumberImprovements: {fileID: 1529942071}
 --- !u!114 &2070610156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19845,8 +19870,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8881739694927082971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
