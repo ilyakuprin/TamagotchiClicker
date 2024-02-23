@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb81986c7200ea74c8775ca289dc3d31, type: 3}
   m_Name: ParasiteConfig
   m_EditorClassIdentifier: 
-  <NumberClicks>k__BackingField: 3
+  <NumberClicks>k__BackingField: 15
   <MoveTime>k__BackingField: 1
   <MultiplierCoinSubtraction>k__BackingField: 0.3
   <MaxSubtractionTimeSec>k__BackingField: 20
-  _occurrenceFrequencyInSec: 10
+  _occurrenceFrequencyInSec: 60

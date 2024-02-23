@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MoveTime>k__BackingField: 2.5
   <RewardMultiplier>k__BackingField: 0.5
-  _occurrenceFrequencyInSec: 5
+  _occurrenceFrequencyInSec: 25
