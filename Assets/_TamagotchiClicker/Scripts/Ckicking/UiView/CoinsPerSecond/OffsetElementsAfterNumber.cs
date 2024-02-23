@@ -5,7 +5,7 @@ namespace TamagotchiClicker
 {
     public class OffsetElementsAfterNumber : MonoBehaviour
     {
-        private const float NumberWidth = 21f;
+        private const float NumberWidth = 14f;
 
         [SerializeField] private RectTransform _elements;
         private ClickViewUi _text;
