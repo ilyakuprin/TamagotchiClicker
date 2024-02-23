@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c629bdd6ac8614d40a1a9757b6552f13, type: 3}
   m_Name: AdvertisingAwardConfig
   m_EditorClassIdentifier: 
-  <MultiplierTime>k__BackingField: 10
+  <MultiplierTime>k__BackingField: 25
