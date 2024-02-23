@@ -20,6 +20,7 @@ namespace TamagotchiClicker
         [SerializeField] private GettingStartPosition _gettingStartPosition;
         [SerializeField] private SettingMuteAudio _settingMuteAudio;
         [SerializeField] private ShowingNumberImprovements _showingNumberImprovements;
+        [SerializeField] private AdvertisingAwardConfig _advertisingAwardConfig;
 
         public override void InstallBindings()
         {
@@ -36,6 +37,7 @@ namespace TamagotchiClicker
             Container.BindInterfacesAndSelfTo<BoostingClickForClick>().AsSingle();
             Container.BindInterfacesAndSelfTo<ResettingClickBoost>().AsSingle();
             Container.BindInterfacesAndSelfTo<MemorizationPressedHeroButtonShop>().AsSingle();
+            Container.BindInterfacesAndSelfTo<AdvertisingAward>().AsSingle();
 
             Container.Bind<HeroView>().FromInstance(_heroView).AsSingle();
             Container.Bind<Click>().FromInstance(_click).AsSingle();
@@ -59,6 +61,7 @@ namespace TamagotchiClicker
 
             Container.Bind<SettingMuteAudio>().FromInstance(_settingMuteAudio).AsSingle();
             Container.Bind<ShowingNumberImprovements>().FromInstance(_showingNumberImprovements).AsSingle();
+            Container.Bind<AdvertisingAwardConfig>().FromInstance(_advertisingAwardConfig).AsSingle();
         }
     }
 }

@@ -9,6 +9,8 @@ namespace TamagotchiClicker
     {
         public event Action Filled;
 
+        private const float MaxFill = 1f;
+
         [field: SerializeField] public Image Filling { get; private set; }
         
         private FillingClickConfig _fillingClickConfig;
@@ -30,7 +32,10 @@ namespace TamagotchiClicker
             Filling.fillAmount += _fillingClickConfig.OneClickFilling;
             
             Filled?.Invoke();
-        } 
+        }
+
+        public void FullFill()
+            => Filling.fillAmount = MaxFill;
 
         private void OnEnable()
             => _heroView.Pressed += Fill;

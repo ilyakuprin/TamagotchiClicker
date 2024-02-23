@@ -38,10 +38,38 @@ namespace TamagotchiClicker
         {
             _isStop = false;
             Devastate().Forget();
-        } 
+        }
 
-        public void StopDevastate()
-            => _isStop = true;
+        public void StopDevastate(float time)
+        {
+            _isStop = true;
+
+            if (time > 0f)
+            {
+                WaitStop(time).Forget();
+            }
+        }
+
+        private async UniTask WaitStop(float time)
+        {
+            var timer = 0f;
+
+            while (timer < time)
+            {
+                if (!_ct.IsCancellationRequested)
+                {
+                    timer += Time.deltaTime;
+
+                    await UniTask.NextFrame();
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            StartDevastate();
+        }
 
         private async UniTask Devastate()
         {
