@@ -5,7 +5,7 @@ namespace TamagotchiClicker
 {
     public class OffsetElementsAfterNumber : MonoBehaviour
     {
-        private const float NumberWidth = 14f;
+        private const float NumberWidth = 15f;
 
         [SerializeField] private RectTransform _elements;
         private ClickViewUi _text;
@@ -24,7 +24,7 @@ namespace TamagotchiClicker
 
         private void Displace()
         {
-            float offset = NumberWidth * (_text.Click.text.Length - 1);
+            float offset = NumberWidth * (_text.Click.text.Length);
             _elements.anchoredPosition = new Vector2(_startPositionX + offset, _elements.anchoredPosition.y);
         }
 

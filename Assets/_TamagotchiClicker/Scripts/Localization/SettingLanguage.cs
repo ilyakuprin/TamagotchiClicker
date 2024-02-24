@@ -42,11 +42,13 @@ namespace TamagotchiClicker
             }
         }
 
+#if UNITY_EDITOR
         public void FindAllLanguageText()
         {
             _languageTexts = Resources.FindObjectsOfTypeAll<LanguageText>();
             Debug.Log(_languageTexts.Length + " объектов");
         }
+#endif
 
         private void OnEnable()
             => YandexGame.SwitchLangEvent += SetLanguage;
