@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bf208b23ba04f4ba0eb8391e63d6b9, type: 3}
   m_Name: GiftConfig
   m_EditorClassIdentifier: 
-  <MoveTime>k__BackingField: 4
+  <MoveTime>k__BackingField: 5.3
   <RewardMultiplier>k__BackingField: 0.5
   _occurrenceFrequencyInSec: 35
