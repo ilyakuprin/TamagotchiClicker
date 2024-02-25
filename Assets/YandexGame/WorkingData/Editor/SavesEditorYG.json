@@ -1,5 +1,5 @@
 {
-    "idSave": 10663,
+    "idSave": 10681,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -19,6 +19,6 @@
         14,
         126
     ],
-    "IndexSelectedHero": 9,
-    "Mute": false
+    "IndexSelectedHero": 14,
+    "Mute": true
 }

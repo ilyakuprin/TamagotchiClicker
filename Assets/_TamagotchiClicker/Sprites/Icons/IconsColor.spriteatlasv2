@@ -13,4 +13,5 @@ SpriteAtlasAsset:
     packables:
     - {fileID: 2800000, guid: 605b6073417274a3485b0bdfe649efd4, type: 3}
     - {fileID: 2800000, guid: b4f602cb9c1e940af8d3db1d6673a803, type: 3}
+    - {fileID: 2800000, guid: 94478567157ed4ca980f6780def9fb7f, type: 3}
   m_IsVariant: 0
