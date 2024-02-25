@@ -11,7 +11,7 @@ namespace TamagotchiClicker
         private readonly CostHeroesConfig _config;
         private readonly CalculationClick _calculationClick;
 
-        private ulong _nextHeroCost;
+        private ulong _nextHeroCost = ulong.MaxValue;
 
         public ClickingHero(HeroView heroView,
                             Saving saving,
@@ -26,7 +26,7 @@ namespace TamagotchiClicker
 
         public void OnAddMoney()
         {
-            _nextHeroCost = _config.Get(GetIndexHero());
+            _nextHeroCost = GetCost();
 
             if (IsLessMax(YandexGame.savesData.Money))
             {
@@ -40,7 +40,7 @@ namespace TamagotchiClicker
 
         public void AddMoney(ulong value)
         {
-            _nextHeroCost = _config.Get(GetIndexHero());
+            _nextHeroCost = GetCost();
 
             if (IsLessMax(value + YandexGame.savesData.Money))
             {
@@ -52,14 +52,33 @@ namespace TamagotchiClicker
             }
         }
 
+        public bool IsMoreMax()
+        {
+            return _nextHeroCost <= YandexGame.savesData.Money;
+        }
+
         private bool IsLessMax(ulong value)
             => (_nextHeroCost > value);
 
         private void CheckNoMoreMax()
         {
-            if (_nextHeroCost < YandexGame.savesData.Money)
+            if (IsMoreMax())
             {
                 YandexGame.savesData.Money = _nextHeroCost;
+            }
+        }
+
+        private ulong GetCost()
+        {
+            var indexNext = YandexGame.savesData.NextHeroIndex;
+
+            if (indexNext >= _config.GetLength())
+            {
+                return ulong.MaxValue;
+            }
+            else
+            {
+                return _config.Get(GetIndexHero());
             }
         }
 
@@ -75,6 +94,7 @@ namespace TamagotchiClicker
 
         public void Initialize()
         {
+            _nextHeroCost = GetCost();
             _heroView.Pressed += OnAddMoney;
         }
 

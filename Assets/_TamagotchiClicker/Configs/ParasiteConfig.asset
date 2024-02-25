@@ -16,4 +16,4 @@ MonoBehaviour:
   <MoveTime>k__BackingField: 1
   <MultiplierCoinSubtraction>k__BackingField: 0.3
   <MaxSubtractionTimeSec>k__BackingField: 20
-  _occurrenceFrequencyInSec: 60
+  _occurrenceFrequencyInSec: 2

@@ -1,6 +1,8 @@
 using DG.Tweening;
 using System;
+using UnityEngine;
 using Zenject;
+using Random = UnityEngine.Random;
 
 namespace TamagotchiClicker
 {
@@ -37,9 +39,22 @@ namespace TamagotchiClicker
         private void SetStartPosition()
             => _parasiteView.RectTransformObject.anchoredPosition = _gettingStartPosition.Get();
 
+        private Vector2 GetEndPosition()
+        {
+            var hero = _hero.RectTransformHero;
+
+            var leftBottomCorner = hero.anchoredPosition - hero.sizeDelta / 4;
+            var rightUpperCorner = hero.anchoredPosition + hero.sizeDelta / 4;
+
+            _parasiteView.EndPoint.anchoredPosition = new Vector2(Random.Range(leftBottomCorner.x, rightUpperCorner.x),
+                Random.Range(leftBottomCorner.y, rightUpperCorner.y));
+
+            return _parasiteView.EndPoint.position;
+        }
+
         private void Move()
         {
-            _parasiteView.RectTransformObject.DOMove(_hero.RectTransformHero.position,
+            _parasiteView.RectTransformObject.DOMove(GetEndPosition(),
                                                      _parasiteConfig.MoveTime)
                 .SetEase(Ease.Linear);
         }
