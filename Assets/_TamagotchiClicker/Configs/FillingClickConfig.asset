@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc36c7d91063da43b3eff2d5bb1d178, type: 3}
   m_Name: FillingClickConfig
   m_EditorClassIdentifier: 
-  <OneClickFilling>k__BackingField: 0.1
-  <TimeDevastationInSec>k__BackingField: 5
+  <OneClickFilling>k__BackingField: 0.15
+  <TimeDevastationInSec>k__BackingField: 1.5
   <BoostFactor>k__BackingField: 2
