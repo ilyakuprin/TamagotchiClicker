@@ -1,5 +1,5 @@
-using System.Threading;
 using Cysharp.Threading.Tasks;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using YG;
@@ -11,6 +11,7 @@ namespace TamagotchiClicker
         private const int TimeUntilAd = 3;
         private const string FormatTimer = "{0} {1}...";
         private const int OneSec = 1;
+        private const float BackupTime = 2.5f;
 
         [SerializeField] private Canvas _canvasPause;
         [SerializeField] private TextMeshProUGUI _timerText;
@@ -18,33 +19,45 @@ namespace TamagotchiClicker
         private CancellationToken _ct;
         private int _countdownCounter;
         private string _startText;
+        private bool _forcedStop;
 
         private void Awake()
         {
             _ct = _timerText.GetCancellationTokenOnDestroy();
         }
 
-#if UNITY_EDITOR
         private void Start()
             => StartWaitTimeShow();
-#endif
 
         private void StartWaitTimeShow()
             => WaitTimeShow().Forget();
 
         private async UniTask WaitTimeShow()
         {
-            await UniTask.WaitForSeconds(YandexGame.Instance.infoYG.fullscreenAdInterval);
+            var checking = true;
 
-            StartAdLaunch();
+            while (checking)
+            {
+                if (YandexGame.timerShowAd >= YandexGame.Instance.infoYG.fullscreenAdInterval)
+                {
+                    StartAdLaunch();
+                    checking = false;
+                }
+
+                await UniTask.WaitForSeconds(OneSec, true, PlayerLoopTiming.Update, _ct);
+            }
         }
 
         private void StartAdLaunch()
         {
+            SetActiveCanvas(true);
             PauseGame();
             RememberStartingValues();
-            StartTimer();
+            ShowTimerAd().Forget();
         }
+
+        private void SetActiveCanvas(bool value)
+            => _canvasPause.gameObject.SetActive(value);
 
         private void PauseGame()
         {
@@ -59,36 +72,44 @@ namespace TamagotchiClicker
             _countdownCounter = TimeUntilAd;
         }
 
-        private void StartTimer()
+        private async UniTask ShowTimerAd()
         {
-            if (_countdownCounter > 0)
+            for (var i = _countdownCounter; i > 0; i--)
             {
-                Timer().Forget();
+                if (!_ct.IsCancellationRequested)
+                {
+                    _timerText.text = string.Format(FormatTimer, _startText, _countdownCounter);
+                    await UniTask.WaitForSeconds(OneSec, true, PlayerLoopTiming.Update, _ct);
+                    _countdownCounter--;
+                }
             }
-            else
-            {
-                _timerText.text = _startText;
-                _canvasPause.gameObject.SetActive(false);
 
-                YandexGame.FullscreenShow();
+            YandexGame.FullscreenShow();
+
+            BackupTimerClosure().Forget();
+
+            _forcedStop = false;
+
+            while (!YandexGame.nowFullAd || !_forcedStop)
+                await UniTask.NextFrame(_ct);
+
+            if (!_forcedStop)
+            {
+                Debug.Log("stop");
+                SetActiveCanvas(false);
+                StartWaitTimeShow();
             }
         }
 
-        private async UniTask Timer()
+        private async UniTask BackupTimerClosure()
         {
-            if (!_ct.IsCancellationRequested)
+            await UniTask.WaitForSeconds(BackupTime, true, PlayerLoopTiming.Update, _ct);
+
+            if (_canvasPause.gameObject.activeInHierarchy)
             {
-                _timerText.text = string.Format(FormatTimer, _startText, _countdownCounter);
-                await UniTask.WaitForSeconds(OneSec, true, PlayerLoopTiming.Update, _ct);
-                _countdownCounter--;
-                StartTimer();
+                SetActiveCanvas(false);
+                _forcedStop = true;
             }
         }
-
-        private void OnEnable()
-            => YandexGame.CloseFullAdEvent += StartWaitTimeShow;
-
-        private void OnDisable()
-            => YandexGame.CloseFullAdEvent -= StartWaitTimeShow;
     }
 }

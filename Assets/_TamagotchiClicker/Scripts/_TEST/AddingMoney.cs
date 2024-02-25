@@ -12,9 +12,12 @@ public class AddingMoney : MonoBehaviour
 
     private void SetMax()
     {
-        var nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
-        YandexGame.savesData.Money = nextHeroCost;
-        _saving.Save();
+        if (YandexGame.savesData.NextHeroIndex < _config.GetLength() - 1)
+        {
+            var nextHeroCost = _config.Get(YandexGame.savesData.NextHeroIndex);
+            YandexGame.savesData.Money = nextHeroCost;
+            _saving.Save();
+        }
     }
 
     private void OnEnable()

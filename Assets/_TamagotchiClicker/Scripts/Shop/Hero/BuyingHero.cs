@@ -51,10 +51,11 @@ namespace TamagotchiClicker
         {
             if (YandexGame.savesData.NextHeroIndex + 1 < _heroMatching.GetLength())
             {
-                YandexGame.savesData.Money = 0;
-                YandexGame.savesData.NextHeroIndex++;
-                _saving.Save();
+                //YandexGame.savesData.NextHeroIndex++;
             }
+            YandexGame.savesData.NextHeroIndex++; //удалить
+            YandexGame.savesData.Money = 0;
+            _saving.Save();
         }
 
         public void Dispose()

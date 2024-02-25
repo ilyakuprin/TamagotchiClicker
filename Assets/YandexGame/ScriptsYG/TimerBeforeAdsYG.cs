@@ -1,16 +1,19 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using YG;
 
 public class TimerBeforeAdsYG : MonoBehaviour
 {
+    private const int TimeUntilAd = 3;
+    private const string FormatTimer = "{0} {1}...";
+    [SerializeField] private TextMeshProUGUI _timerText;
+    private string _startText;
+
     [SerializeField, 
         Tooltip("Объект таймера перед показом рекламы. Он будет активироваться и деактивироваться в нужное время.")]
     private GameObject secondsPanelObject;
-    [SerializeField,
-        Tooltip("Массив объектов, которые будут показываться по очереди через секунду. Сколько объектов вы поместите в массив, столько секунд будет отчитываться перед показом рекламы.\n\nНапример, поместите в массив три объекта: певый с текстом '3', второй с текстом '2', третий с текстом '1'.\nВ таком случае произойдёт отчет трёх секунд с показом объектов с цифрами перед рекламой.")]
-    private GameObject[] secondObjects;
 
     [SerializeField,
         Tooltip("Работа таймера в реальном времени, независимо от time scale.")]
@@ -27,10 +30,7 @@ public class TimerBeforeAdsYG : MonoBehaviour
         if (secondsPanelObject)
             secondsPanelObject.SetActive(false);
 
-        for (int i = 0; i < secondObjects.Length; i++)
-            secondObjects[i].SetActive(false);
-
-        if (secondObjects.Length > 0)
+        if (_timerText)
             StartCoroutine(CheckTimerAd());
         else
             Debug.LogError("Fill in the array 'secondObjects'");
@@ -62,15 +62,15 @@ public class TimerBeforeAdsYG : MonoBehaviour
     int objSecCounter;
     IEnumerator TimerAdShow()
     {
+        _startText = _timerText.text;
+        PauseGame();
+
         bool process = true;
         while (process)
         {
-            if (objSecCounter < secondObjects.Length)
+            if (objSecCounter < TimeUntilAd)
             {
-                for (int i2 = 0; i2 < secondObjects.Length; i2++)
-                    secondObjects[i2].SetActive(false);
-
-                secondObjects[objSecCounter].SetActive(true);
+                _timerText.text = string.Format(FormatTimer, _startText, TimeUntilAd - objSecCounter);
                 objSecCounter++;
 
                 if (!realtimeSeconds)
@@ -79,10 +79,12 @@ public class TimerBeforeAdsYG : MonoBehaviour
                     yield return new WaitForSecondsRealtime(1.0f);
             }
 
-            if (objSecCounter == secondObjects.Length)
+            if (objSecCounter == TimeUntilAd)
             {
                 YandexGame.FullscreenShow();
                 StartCoroutine(BackupTimerClosure());
+
+                _timerText.text = _startText;
 
                 while (!YandexGame.nowFullAd)
                     yield return null;
@@ -110,5 +112,11 @@ public class TimerBeforeAdsYG : MonoBehaviour
             objSecCounter = 0;
             StopCoroutine(TimerAdShow());
         }
+    }
+
+    private void PauseGame()
+    {
+        Time.timeScale = 0;
+        AudioListener.pause = true;
     }
 }
